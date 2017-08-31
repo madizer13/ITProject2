@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Air force Squadron
+        </ion-title>
+
+        <ion-buttons end>
+            <button ion-button icon-only (click)="addRecord()">
+            <ion-icon name="add"></ion-icon>
+         </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <ion-card class="movie" text-wrap *ngFor="let flight of Flight | async">
+            <ion-item>
+                <h2>{{ flight.title }}</h2>
+                <small>{{ flight.date }} ({{ flight.duration }})</small>
+                <p>{{ flight.summary }}</p>
+
+
+                <section class="multiples">
+                    <h3>Crew</h3>
+                    <ion-chip *ngFor="let crew of flight.crew" padding-left padding-right margin-right>{{ crew.name }}</ion-chip>
+                </section>
+
+
+                <section class="multiples">
+                    <h3>Genres</h3>
+                    <ion-chip *ngFor="let type of flight.type" padding-left padding-right margin-right>{{ type.name }}</ion-chip>
+                </section>
+
+            </ion-item>
+
+
+            <div class="manage-record" padding>
+                <button ion-button text-center color="primary" (click)="editFlight(flight)">Edit</button>
+
+                <button ion-button text-center color="danger" (click)="deleteFlight(flight)">Delete</button>
+            </div>
+        </ion-card>
+    </ion-list>
+
+</ion-content>
