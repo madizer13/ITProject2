@@ -1,0 +1,48 @@
+[ {
+  "Flights" : {
+    "CurrencyRole" : {
+      "RoleID" : " ",
+      "currencyID" : " c1"
+    },
+    "Flight" : {
+      "DTG" : "any');",
+      "Landing" : " name');",
+      "Platform" : " rank');",
+      "Takeoff" : " name');",
+      "id" : {
+        "flightID" : "pilot"
+      }
+    },
+    "Person" : {
+      "Name" : "name');",
+      "PMKeys" : " ",
+      "id(Role)" : " "
+    },
+    "PersonCurrency" : {
+      "attributeName" : "rank');",
+      "currencyID" : "",
+      "id" : {
+        "PmKeys(person ID)" : " "
+      }
+    },
+    "PersonFlight" : {
+      "PmKeys" : " ",
+      "id(Role)" : " "
+    },
+    "PersonRole" : {
+      "Pmkeys" : " ",
+      "RoleID" : " "
+    },
+    "Role" : {
+      "RoleID" : " ",
+      "RoleName" : "any');"
+    },
+    "currency" : {
+      "Destination" : "??');",
+      "ExpiryDate" : "date');",
+      "id" : {
+        "Oid" : 6577
+      }
+    }
+  }
+} ]
