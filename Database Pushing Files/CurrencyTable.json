@@ -1,0 +1,169 @@
+{
+	"xml": {
+		"items": {
+			"item": [
+				{
+					"currency": "CATEGORY TEST",
+					"period": "365",
+					"id": "1"
+				},
+				{
+					"currency": "QFI (CL6)",
+					"period": "365",
+					"id": "2"
+				},
+				{
+					"currency": "IRE (CL6)",
+					"period": "365",
+					"id": "3"
+				},
+				{
+					"currency": "QFI (BBJ)",
+					"period": "740",
+					"id": "4"
+				},
+				{
+					"currency": "IRE (BBJ)",
+					"period": "740",
+					"id": "5"
+				},
+				{
+					"currency": "SIMULATOR TRAINING",
+					"period": "183",
+					"id": "6"
+				},
+				{
+					"currency": "IRT",
+					"period": "365",
+					"id": "7"
+				},
+				{
+					"currency": "SORTIE (CL6)",
+					"period": "92",
+					"id": "8"
+				},
+				{
+					"currency": "SORTIE (BBJ)",
+					"period": "62",
+					"id": "9"
+				},
+				{
+					"currency": "LANDINGS",
+					"period": "35",
+					"id": "10"
+				},
+				{
+					"currency": "2nd LANDING",
+					"period": "35",
+					"id": "11"
+				},
+				{
+					"currency": "NIGHT LANDING",
+					"period": "92",
+					"id": "12"
+				},
+				{
+					"currency": "PRECISION APPROACH",
+					"period": "35",
+					"id": "13"
+				},
+				{
+					"currency": "APV (BBJ)",
+					"period": "35",
+					"id": "14"
+				},
+				{
+					"currency": "NON-PRECISION APPROACH (CL6)",
+					"period": "92",
+					"id": "15"
+				},
+				{
+					"currency": "CIRCLING APPROACH",
+					"period": "92",
+					"id": "16"
+				},
+				{
+					"currency": "NO SLOPE",
+					"period": "183",
+					"id": "17"
+				},
+				{
+					"currency": "HG AIII (BBJ)",
+					"period": "92",
+					"id": "18"
+				},
+				{
+					"currency": "AUTOLAND (BBJ)",
+					"period": "92",
+					"id": "19"
+				},
+				{
+					"currency": "FLAP 20 LANDING (CL6)",
+					"period": "92",
+					"id": "20"
+				},
+				{
+					"currency": "GO AROUND / MISSED APPROACH (CL6)",
+					"period": "92",
+					"id": "21"
+				},
+				{
+					"currency": "HAND FLOWN APPROACH, FD ENGAGED (CL6)",
+					"period": "92",
+					"id": "22"
+				},
+				{
+					"currency": "HAND FLOWN INSTRUMENT APPROACH - RAW DATA (CL6)",
+					"period": "92",
+					"id": "23"
+				},
+				{
+					"currency": "HAND FLOWN VISUAL APPROACH - RAW DATA (CL6)",
+					"period": "92",
+					"id": "24"
+				},
+				{
+					"currency": "> 15 KTS CROSSWIND LANDING (CL6)",
+					"period": "92",
+					"id": "25"
+				},
+				{
+					"currency": "SIM - EMERGENCY DESCENT (CL6)",
+					"period": "365",
+					"id": "26"
+				},
+				{
+					"currency": "SIM - ENGINE FAILURE (IN CRUISE) (CL6)",
+					"period": "365",
+					"id": "27"
+				},
+				{
+					"currency": "SIM - ENGINE FAILURE (ON APPROACH) (CL6)",
+					"period": "365",
+					"id": "28"
+				},
+				{
+					"currency": "SIM - HYDRAULIC/LANDING GEAR ABNORMAL (CL6)",
+					"period": "365",
+					"id": "29"
+				},
+				{
+					"currency": "SIM - ELECTRICAL SYSTEM ABNORMAL (CL6)",
+					"period": "365",
+					"id": "30"
+				},
+				{
+					"currency": "SIM - EFIS ABNORMAL (CL6)",
+					"period": "365",
+					"id": "31"
+				},
+				{
+					"currency": "SIM - FLIGHT CONTROLS ABNORMAL (CL6)",
+					"period": "365",
+					"id": "32"
+				}
+			]
+		},
+		"_xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance"
+	}
+}

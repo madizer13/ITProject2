@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<items>
+		<item>
+			<currency>CATEGORY TEST</currency>
+			<period>365</period>
+			<id>1</id>
+		</item>
+		<item>
+			<currency>QFI (CL6)</currency>
+			<period>365</period>
+			<id>2</id>
+		</item>
+		<item>
+			<currency>IRE (CL6)</currency>
+			<period>365</period>
+			<id>3</id>
+		</item>
+		<item>
+			<currency>QFI (BBJ)</currency>
+			<period>740</period>
+			<id>4</id>
+		</item>
+		<item>
+			<currency>IRE (BBJ)</currency>
+			<period>740</period>
+			<id>5</id>
+		</item>
+		<item>
+			<currency>SIMULATOR TRAINING</currency>
+			<period>183</period>
+			<id>6</id>
+		</item>
+		<item>
+			<currency>IRT</currency>
+			<period>365</period>
+			<id>7</id>
+		</item>
+		<item>
+			<currency>SORTIE (CL6)</currency>
+			<period>92</period>
+			<id>8</id>
+		</item>
+		<item>
+			<currency>SORTIE (BBJ)</currency>
+			<period>62</period>
+			<id>9</id>
+		</item>
+		<item>
+			<currency>LANDINGS</currency>
+			<period>35</period>
+			<id>10</id>
+		</item>
+		<item>
+			<currency>2nd LANDING</currency>
+			<period>35</period>
+			<id>11</id>
+		</item>
+		<item>
+			<currency>NIGHT LANDING</currency>
+			<period>92</period>
+			<id>12</id>
+		</item>
+		<item>
+			<currency>PRECISION APPROACH</currency>
+			<period>35</period>
+			<id>13</id>
+		</item>
+		<item>
+			<currency>APV (BBJ)</currency>
+			<period>35</period>
+			<id>14</id>
+		</item>
+		<item>
+			<currency>NON-PRECISION APPROACH (CL6)</currency>
+			<period>92</period>
+			<id>15</id>
+		</item>
+		<item>
+			<currency>CIRCLING APPROACH</currency>
+			<period>92</period>
+			<id>16</id>
+		</item>
+		<item>
+			<currency>NO SLOPE</currency>
+			<period>183</period>
+			<id>17</id>
+		</item>
+		<item>
+			<currency>HG AIII (BBJ)</currency>
+			<period>92</period>
+			<id>18</id>
+		</item>
+		<item>
+			<currency>AUTOLAND (BBJ)</currency>
+			<period>92</period>
+			<id>19</id>
+		</item>
+		<item>
+			<currency>FLAP 20 LANDING (CL6)</currency>
+			<period>92</period>
+			<id>20</id>
+		</item>
+		<item>
+			<currency>GO AROUND / MISSED APPROACH (CL6)</currency>
+			<period>92</period>
+			<id>21</id>
+		</item>
+		<item>
+			<currency>HAND FLOWN APPROACH, FD ENGAGED (CL6)</currency>
+			<period>92</period>
+			<id>22</id>
+		</item>
+		<item>
+			<currency>HAND FLOWN INSTRUMENT APPROACH - RAW DATA (CL6)</currency>
+			<period>92</period>
+			<id>23</id>
+		</item>
+		<item>
+			<currency>HAND FLOWN VISUAL APPROACH - RAW DATA (CL6)</currency>
+			<period>92</period>
+			<id>24</id>
+		</item>
+		<item>
+			<currency>&gt; 15 KTS CROSSWIND LANDING (CL6)</currency>
+			<period>92</period>
+			<id>25</id>
+		</item>
+		<item>
+			<currency>SIM - EMERGENCY DESCENT (CL6)</currency>
+			<period>365</period>
+			<id>26</id>
+		</item>
+		<item>
+			<currency>SIM - ENGINE FAILURE (IN CRUISE) (CL6)</currency>
+			<period>365</period>
+			<id>27</id>
+		</item>
+		<item>
+			<currency>SIM - ENGINE FAILURE (ON APPROACH) (CL6)</currency>
+			<period>365</period>
+			<id>28</id>
+		</item>
+		<item>
+			<currency>SIM - HYDRAULIC/LANDING GEAR ABNORMAL (CL6)</currency>
+			<period>365</period>
+			<id>29</id>
+		</item>
+		<item>
+			<currency>SIM - ELECTRICAL SYSTEM ABNORMAL (CL6)</currency>
+			<period>365</period>
+			<id>30</id>
+		</item>
+		<item>
+			<currency>SIM - EFIS ABNORMAL (CL6)</currency>
+			<period>365</period>
+			<id>31</id>
+		</item>
+		<item>
+			<currency>SIM - FLIGHT CONTROLS ABNORMAL (CL6)</currency>
+			<period>365</period>
+			<id>32</id>
+		</item>
+	</items>
+</xml>

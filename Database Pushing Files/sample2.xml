@@ -1,0 +1,14 @@
+<xml version="1.0" encoding="UTF-8">
+<items>
+<item>
+<currency>Category Test</currency>
+<period>365</period>
+<id>1</id>
+</item>
+<item>
+<currency>QFI CL6</currency>
+<period>365</period>
+<id>2</id>
+</item>
+</items>
+</xml>
