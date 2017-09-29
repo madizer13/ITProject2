@@ -1,5 +1,6 @@
 page-home {
-    .movie {
+    .flight {
+        background: #55acee;
         h2 {
             font-weight: bold;
             font-size: 2.0rem;
@@ -14,13 +15,14 @@ page-home {
     .multiples {
         margin: 2em 0 0 0;
         h3 {
+            color: #063F41;
             font-weight: bold;
             padding: 0 0 0.5em 0;
         }
     }
     .manage-record {
         button {
-            width: 40%;
+            width: 20%;
         }
     }
 }

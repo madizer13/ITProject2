@@ -1,47 +1,62 @@
 <ion-header>
     <ion-navbar>
-        <ion-title>
-            Air force Squadron
-        </ion-title>
-
-        <ion-buttons end>
-            <button ion-button icon-only (click)="addRecord()">
-            <ion-icon name="add"></ion-icon>
-         </button>
+        <ion-title> 34SQN </ion-title>
+        <ion-buttons right>
+            <button ion-button icon-only (click)="logout()">
+                <ion-icon name="log-out"></ion-icon>
+              </button>
         </ion-buttons>
+
     </ion-navbar>
 </ion-header>
 
-
 <ion-content padding>
     <ion-list>
-        <ion-card class="movie" text-wrap *ngFor="let flight of Flight | async">
+        <ion-card class="flight" text-wrap *ngFor="let flight of Flight | async">
+
             <ion-item>
                 <h2>{{ flight.title }}</h2>
                 <small>{{ flight.date }} ({{ flight.duration }})</small>
                 <p>{{ flight.summary }}</p>
-
 
                 <section class="multiples">
                     <h3>Crew</h3>
                     <ion-chip *ngFor="let crew of flight.crew" padding-left padding-right margin-right>{{ crew.name }}</ion-chip>
                 </section>
 
-
                 <section class="multiples">
+                    <h3>flight type</h3>
                     <h3>Genres</h3>
+
                     <ion-chip *ngFor="let type of flight.type" padding-left padding-right margin-right>{{ type.name }}</ion-chip>
                 </section>
 
             </ion-item>
-
-
-            <div class="manage-record" padding>
-                <button ion-button text-center color="primary" (click)="editFlight(flight)">Edit</button>
-
-                <button ion-button text-center color="danger" (click)="deleteFlight(flight)">Delete</button>
-            </div>
         </ion-card>
+
     </ion-list>
 
+
+    <ion-grid right> </ion-grid>
+    <button ion-button right block royal="primary" (click)="addRecord()">
+        add Flight
+    </button>
+    <button ion-button right block royal="primary" (click)="search() ">
+            searchFlight
+    </button>
+    <button ion-button right block royal="primary" (click)="statistics() ">
+            Statistics
+    </button>
+    <button ion-button ight block royal="primary" (click)="settings()">
+           Admin seetings
+         </button>
+
 </ion-content>
+
+
+
+<ion-footer>
+    <ion-toolbar>
+        <ion-title>Footer</ion-title>
+    </ion-toolbar>
+</ion-footer>

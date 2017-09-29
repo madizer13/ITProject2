@@ -23,7 +23,7 @@ export class HomePage {
    }
 
 
-
+/* shows whats on the screen
    ionViewDidLoad()
    {
       this.platform.ready()
@@ -32,7 +32,7 @@ export class HomePage {
          this.Flight= this.angFire.list('/flights');
       });
    }
-
+*/
 
 
    addRecord()
@@ -41,16 +41,22 @@ export class HomePage {
       modal.present();
    }
 
+   logout() { 
+    let nav = this.navCtrl.setRoot('login');    
+  }
+  search() { 
+    let nav = this.navCtrl.setRoot('search');    
+  }
 
+  
+   statistics(){
 
-   editFlight(flight)
-   {
-      let params = { flight: flight, isEdited: true },
-          modal  = this.modalCtrl.create('Modals', params);
-
-      modal.present();
+    let nav= this.navCtrl.setRoot('statistics');
    }
+    settings(){
+  let nav= this.navCtrl.setRoot('settings');
 
+}
 
 
    deleteFlight(movie : any)
@@ -59,3 +65,12 @@ export class HomePage {
    }
 
 }
+
+/* 
+ <div class="manage-record" padding>
+
+        <button ion-button text-center color="primary" (click)="editFlight(flight)">Edit</button>
+
+        <button ion-button text-center color="danger" (click)="deleteFlight(flight)">Delete</button>
+    </div>
+*/
