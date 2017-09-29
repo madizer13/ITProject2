@@ -1,7 +1,7 @@
 <ion-header>
 
     <ion-navbar>
-        <ion-title>settings</ion-title>
+        <ion-title>Admin settings</ion-title>
         <ion-buttons left>
             <button ion-button icon-only (click)="goBack()">
         <ion-icon name="arrow-back"></ion-icon>
@@ -13,5 +13,22 @@
 
 
 <ion-content padding>
+
+    <ion-list>
+        <ion-item>
+            <ion-label color="primary">Url</ion-label>
+            <ion-input placeholder="url Database"></ion-input>
+        </ion-item>
+
+
+        <button button ion-button right block royal="primary" (click)=" addcurrency() ">
+            Add currency  </button>
+        <button button ion-button right block royal="primary" (click)=" addperson() ">
+             Add Person</button>
+
+
+
+    </ion-list>
+
 
 </ion-content>

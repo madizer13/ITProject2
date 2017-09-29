@@ -1,3 +1,4 @@
+import { Modals } from './../addflight/modals';
 import firebase  from 'firebase/app';
 import { FirebaseListObservable, AngularFireDatabase } from 'angularfire2/database';
 import { Placeholder } from '@angular/compiler/src/i18n/i18n_ast';
@@ -24,7 +25,8 @@ export class SearchPage {
               private modalCtrl: ModalController,
               public params    : NavParams, 
               private databa   : AngularFireDatabase,
-              private platform  : Platform)
+              private platform  : Platform,
+             )
               {
                 this.Flight=databa.list('/random');
                 
@@ -83,7 +85,7 @@ export class SearchPage {
   {
      let params = { flight: flight, isEdited: true },
          modal  = this.modalCtrl.create('Modals', params);
-
+  
      modal.present();
   }
 

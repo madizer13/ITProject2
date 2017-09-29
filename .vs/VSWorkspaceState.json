@@ -7,9 +7,10 @@
     "\\34SQN\\src",
     "\\34SQN\\src\\app",
     "\\34SQN\\src\\pages",
-    "\\34SQN\\typings",
-    "\\Database Pushing Files"
+    "\\34SQN\\src\\pages\\home",
+    "\\34SQN\\src\\pages\\settings",
+    "\\34SQN\\src\\pages\\statistics"
   ],
-  "SelectedNode": "\\34SQN\\typings.json",
+  "SelectedNode": "\\34SQN\\src\\pages\\home\\home.html",
   "PreviewInSolutionExplorer": false
 }

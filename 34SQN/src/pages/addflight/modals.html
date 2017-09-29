@@ -26,7 +26,7 @@
 
 
         <ion-item>
-            <ion-label stacked>pilot name:</ion-label>
+            <ion-label stacked>Pilot name:</ion-label>
             <ion-input type="text" formControlName="name" [(ngModel)]="pilotName"></ion-input>
         </ion-item>
 
@@ -40,9 +40,9 @@
 
 
         <ion-item>
-            <ion-label stacked>type of Flight:</ion-label>
+            <ion-label stacked>Type of Flight:</ion-label>
             <ion-select formControlName="type" multiple="true" [(ngModel)]="flighttype">
-                <ion-option value="Jet">Action</ion-option>
+                <ion-option value="Jet">Challenger</ion-option>
                 <ion-option value="Surveliance">Surveliance</ion-option>
                 <ion-option value="Whatever">Whatever</ion-option>
 
@@ -52,7 +52,7 @@
 
 
         <ion-item>
-            <ion-label stacked>crew Member:</ion-label>
+            <ion-label stacked>Crew Member:</ion-label>
             <ion-select formControlName="crew" multiple="true" [(ngModel)]="crewpilot">
                 <ion-option value="Keanu Reeves">Keanu Reeves</ion-option>
                 <ion-option value="Ian McShane">Ian McShane</ion-option>
@@ -82,6 +82,7 @@
 
 
 
+
         <ion-item>
             <ion-label stacked>Summary:</ion-label>
             <ion-textarea rows="6" formControlName="summary" [(ngModel)]="flightSummary"></ion-textarea>
@@ -90,7 +91,7 @@
 
 
         <ion-item>
-            <ion-label stacked>Flight rating:</ion-label>
+            <ion-label stacked>Flight number :</ion-label>
             <ion-select formControlName="flightRating" [(ngModel)]="flightRaating">
                 <ion-option value="captain">captcain</ion-option>
                 <ion-option value="1">1</ion-option>
