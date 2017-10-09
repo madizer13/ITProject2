@@ -73,12 +73,12 @@ export class Modals {
            year               : string = this.form.controls["year"].value,
            vip                : boolean = this.form.controls["vip"].value,
            nightflight        : boolean = this.form.controls["nightflight"].value,
-           flightID           : string = this.form.controls["flightID"],
-           arrivalAirport     : string = this.form.controls["arrivalAirport"],
-           departureAirport   : string = this.form.controls["departureAirport"],
-           approachtype       : string = this.form.controls["approachType"],
-           takeOffType        : string = this.form.controls["takeOffType"],
-           landingType        : string = this.form.controls["landingType"]
+           flightID           : string = this.form.controls["flightID"].value,
+           arrivalAirport     : string = this.form.controls["arrivalAirport"].value,
+           departureAirport   : string = this.form.controls["departureAirport"].value,
+           approachtype       : string = this.form.controls["approachType"].value,
+           takeOffType        : string = this.form.controls["takeOffType"].value,
+           landingType        : string = this.form.controls["landingType"].value
 
       this.flights.push({
           DepartureDTG: year,
@@ -87,12 +87,12 @@ export class Modals {
           WeatherSummary: summary,
           VIP: vip,
           NightFlight: nightflight,
-          //ApproachType: approachtype,
-          //ArrivalAirport: arrivalAirport,
-          //FlightID: flightID,
-          //DepartureAirport: departureAirport,
-          //LandingType: landingType,
-          //TakeoffType: takeOffType
+          ApproachType: approachtype,
+          ArrivalAirport: arrivalAirport,
+          FlightID: flightID,
+          DepartureAirport: departureAirport,
+          LandingType: landingType,
+          TakeoffType: takeOffType
       })
       
       this.closeModal();
