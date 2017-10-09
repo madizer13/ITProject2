@@ -47,18 +47,18 @@ export class Modals {
    )
    {
       this.form 	    = _FB.group({
-         'summary' 	        : ['', Validators.minLength(10)],
+         'summary' 	        : [''],
          'year' 	          : ['', Validators.required],
          'duration'	        : ['', Validators.required],
          'type'             : ['', Validators.required],
          'nightflight'      : ['false'],
          'vip'              : ['false'],
-         'flightID'         : [''],
-         'arrivalAirport'   : [''],
-         'departureAirport' : [''],
-         'approachType'     : [''],
-         'takeOffType'      : [''],
-         'landingType'      : ['']
+         'flightID'         : ['', Validators.required],
+         'arrivalAirport'   : ['', Validators.required],
+         'departureAirport' : ['', Validators.required],
+         'approachType'     : ['', Validators.required],
+         'takeOffType'      : ['', Validators.required],
+         'landingType'      : ['', Validators.required]
       });
       this.flights = this._FIRE.list('/Data/Flight');
       this.userProfile = firebase.database().ref('/Data/Flight');
