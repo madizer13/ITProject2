@@ -23,100 +23,88 @@
                 Amend this flight
             </div>
         </ion-item-divider>
-
-
         <ion-item>
-            <ion-label stacked>Pilot name:</ion-label>
-            <ion-input type="text" formControlName="name" [(ngModel)]="pilotName"></ion-input>
+          <ion-label> Departure Date </ion-label>
+          <ion-datetime displayFormat="DD-MM-YYYYTHH:mm" pickerFormat="DD-MMM-YYYYTHH:mm" formControlName="year" [(ngModel)]="flyYear"></ion-datetime>
         </ion-item>
 
-
-
-        <ion-item>
-            <ion-label stacked>Flight Duraation:</ion-label>
-            <ion-input type="text" formControlName="duration" [(ngModel)]="flightDuration"></ion-input>
-        </ion-item>
-
-
+      <ion-item>
+        <ion-label> Arrival Date </ion-label>
+        <ion-datetime displayFormat="DD-MM-YYYYTHH:mm" pickerFormat="DD-MMM-YYYYTHH:mm" formControlName="duration" [(ngModel)]="flightduration"></ion-datetime>
+      </ion-item>
 
         <ion-item>
             <ion-label stacked>Type of Flight:</ion-label>
-            <ion-select formControlName="type" multiple="true" [(ngModel)]="flighttype">
-                <ion-option value="Jet">Challenger</ion-option>
-                <ion-option value="Surveliance">Surveliance</ion-option>
-                <ion-option value="Whatever">Whatever</ion-option>
+            <ion-select formControlName="type" multiple="false" [(ngModel)]="flighttype">
+                <ion-option value="CL604">Challenger</ion-option>
+                <ion-option value="BBJ">BBJ</ion-option>
 
             </ion-select>
         </ion-item>
 
-
-
         <ion-item>
-            <ion-label stacked>Crew Member:</ion-label>
-            <ion-select formControlName="crew" multiple="true" [(ngModel)]="crewpilot">
-                <ion-option value="Keanu Reeves">Keanu Reeves</ion-option>
-                <ion-option value="Ian McShane">Ian McShane</ion-option>
-                <ion-option value="Adrianne Palicki">Adrianne Palicki</ion-option>
-                <ion-option value="Woody Harrelson">Woody Harrelson</ion-option>
-                <ion-option value="Willem Dafoe">Willem Dafoe</ion-option>
-                <ion-option value="John Leguizamo">John Leguizamo</ion-option>
-                <ion-option value="Michael Nyqvist">Michael Nyqvist</ion-option>
-                <ion-option value="Bridget Moynahan">Bridget Moynahan</ion-option>
-                <ion-option value="Alfie Allen">Alfie Allen</ion-option>
-                <ion-option value="Russell Crowe">Russell Crowe</ion-option>
-                <ion-option value="Oliver Reed">Oliver Reed</ion-option>
-                <ion-option value="March">Joaquin Phoenix</ion-option>
-                <ion-option value="Ryan">Connie Nielsen</ion-option>
-                <ion-option value="Sarah">Ralf Moeller</ion-option>
-                <ion-option value="Tom Hanks">Tom Hanks</ion-option>
-                <ion-option value="Leonardo Dicaprio">Leonardo Dicaprio</ion-option>
-                <ion-option value="Christopher Walken">Christopher Walken</ion-option>
-                <ion-option value="Phelps">Mike Myers</ion-option>
-                <ion-option value="Heather Graham">Heather Graham</ion-option>
-                <ion-option value="Prentice">Verne Troyer</ion-option>
-                <ion-option value="Robert Wagner">Robert Wagner</ion-option>
-                <ion-option value="Lauren">Rob Lowe</ion-option>
-                <ion-option value="Mindy Sterling">Mindy Sterling</ion-option>
-            </ion-select>
+          <ion-label stacked>FlightID:</ion-label>
+          <ion-input type="text" formControlName="flightID" [(ngModel)]="FlightID"></ion-input>
         </ion-item>
 
-
-
+        <ion-item>
+          <ion-label stacked>Arrival Airport:</ion-label>
+          <ion-input type="text" formControlName="arrivalAirport" [(ngModel)]="AAirport"></ion-input>
+        </ion-item>
 
         <ion-item>
-            <ion-label stacked>Summary:</ion-label>
+          <ion-label stacked>Departure Airport:</ion-label>
+          <ion-input type="text" formControlName="departureAirport" [(ngModel)]="DAirport"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Approach Type:</ion-label>
+          <ion-select formControlName="approachType" multiple="false" [(ngModel)]="aType">
+            <ion-option value="OptionOne">Option</ion-option>
+            <ion-option value="OptionTwo">Option</ion-option>
+
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Takeoff Type:</ion-label>
+          <ion-select formControlName="takeOffType" multiple="false" [(ngModel)]="tType">
+            <ion-option value="OptionOne">Option</ion-option>
+            <ion-option value="OptionTwo">Option</ion-option>
+
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Landing Type:</ion-label>
+          <ion-select formControlName="landingType" multiple="false" [(ngModel)]="lType">
+            <ion-option value="OptionOne">Option</ion-option>
+            <ion-option value="OptionTwo">Option</ion-option>
+
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Weather Summary:</ion-label>
             <ion-textarea rows="6" formControlName="summary" [(ngModel)]="flightSummary"></ion-textarea>
         </ion-item>
 
+      <ion-item>
+        <ion-label fixed>Night Flight</ion-label>
+        <ion-checkbox formControlName="nightflight"></ion-checkbox>
+      </ion-item>
 
-
-        <ion-item>
-            <ion-label stacked>Flight number :</ion-label>
-            <ion-select formControlName="flightRating" [(ngModel)]="flightRaating">
-                <ion-option value="captain">captcain</ion-option>
-                <ion-option value="1">1</ion-option>
-                <ion-option value="2">2</ion-option>
-                <ion-option value="3">3</ion-option>
-                <ion-option value="4">4</ion-option>
-                <ion-option value="5">5</ion-option>
-
-            </ion-select>
-        </ion-item>
-
-
-
-        <ion-item>
-            <ion-label> Date </ion-label>
-            <ion-datetime displayFormat="MM/DD/YYYY" formControlName="year" [(ngModel)]="flyYear"></ion-datetime>
-        </ion-item>
-
+      <ion-item>
+        <ion-label fixed>VIP</ion-label>
+        <ion-checkbox formControlName="vip"></ion-checkbox>
+      </ion-item>
 
         <ion-item>
             <input type="hidden" name="flightId">
 
             <button ion-button block color="primary" text-center [disabled]="!form.valid">
             <div *ngIf="!isEditable">
-               Add a new flight
+               Add Crew
             </div>
 
             <div *ngIf="isEditable">
@@ -126,3 +114,4 @@
         </ion-item>
 
     </form>
+</ion-content>

@@ -41,11 +41,19 @@ def clear(): # This method resets the database
     ref = db.reference('/Data')
     users_ref = ref.child('Flight')
     users_ref.set({
-        'FlightID': {
-            'DTG': ' ',
-            'Landing': ' ',
+        'FlightUUID': {
+            'DepartureDTG': ' ',
+            'FlightID': ' ',
+            'NightFlight': ' ',
+            'VIP': ' ',
             'Platform': ' ',
-            'Takeoff': ' '
+            'ApproachType': ' ',  
+            'ArrivalAirport': ' ',  
+            'DepartureAirport': ' ', 
+            'ArrivalDTG': ' ',
+            'LandingType': ' ',   
+            'TakeoffType': ' ',   
+            'WeatherSummary' : ' '
             }
         })
     ref = db.reference('/Data')
@@ -61,7 +69,8 @@ def clear(): # This method resets the database
     users_ref.set({
         'FlightID': {
             'PersonID': ' ',
-            'RoleID': ' '
+            'RoleID': ' ',
+            'Duration': ' '
             }
         })
     ref = db.reference('/Data')
