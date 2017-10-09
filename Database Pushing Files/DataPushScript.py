@@ -17,16 +17,18 @@ def clear(): # This method resets the database
     ref = db.reference('/Data') # Get the database reference
     users_ref = ref.child('Person') # Create the table
     users_ref.set({ # Populate the table with a key and fields under key
-        'PMKeys': {
-            'Name': ' ',
-            'RoleID': ' '
+        'UUID': {
+          'PersonID': ' ',
+          'Name': ' ',
+          'RoleID': ' '
             }
         })
     # Rest of this method follows the above format for each table
     ref = db.reference('/Data')
     users_ref = ref.child('Currency')
     users_ref.set({
-        'CurrencyID': {
+        'UUID': {
+          'CurrencyID': ' ',
             'CurrencyName': ' ',
             'Period': ' '
             }
@@ -34,14 +36,15 @@ def clear(): # This method resets the database
     ref = db.reference('/Data')
     users_ref = ref.child('CurrencyRole')
     users_ref.set({
-        'CurrencyID': {
-            'RoleID': ' ' 
+        'UUID': {
+            'RoleID': ' ',
+            'CurrencyID': ' '
             }
         })
     ref = db.reference('/Data')
     users_ref = ref.child('Flight')
     users_ref.set({
-        'FlightUUID': {
+        'UUID': {
             'DepartureDTG': ' ',
             'FlightID': ' ',
             'NightFlight': ' ',
@@ -50,34 +53,50 @@ def clear(): # This method resets the database
             'ApproachType': ' ',  
             'ArrivalAirport': ' ',  
             'DepartureAirport': ' ', 
-            'ArrivalDTG': ' ',
-            'LandingType': ' ',   
-            'TakeoffType': ' ',   
+            'ArrivalDTG': ' ', 
             'WeatherSummary' : ' '
             }
         })
     ref = db.reference('/Data')
     users_ref = ref.child('PersonCurrency')
     users_ref.set({
-        'PersonID': {
+        'UUID': {
+            'PersonID': ' ',
             'CurrencyID': ' ',
             'AchievementDate': ' '
             }
         })
     ref = db.reference('/Data')
-    users_ref = ref.child('PersonFlight')
+    users_ref = ref.child('PilotFlight')
     users_ref.set({
-        'FlightID': {
+        'UUID': {
             'PersonID': ' ',
             'RoleID': ' ',
-            'Duration': ' '
+            'FirstDay': ' ',
+            'SecondDay': ' ',
+            'FirstNight': ' ',
+            'SecondNight': ' ',
+            'DayLandings': ' ',
+            'NightLandings': ' ',
+            'FlightID': ' '
             }
         })
+
+    ref = db.reference('/Data')
+    users_ref = ref.child('CrewFlight')
+    users_ref.set({
+      'UUID': {
+        'FlightID': ' ',
+        'RoleID': ' ',
+        'Duration': ' '
+        }
+      })
     ref = db.reference('/Data')
     users_ref = ref.child('Role')
     users_ref.set({
-        'RoleID': {
-            'RoleName': ' '
+        'UUID: {
+            'RoleName': ' ',
+            'RoleID': ' '
             }
         })
 
