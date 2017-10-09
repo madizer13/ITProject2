@@ -98,7 +98,7 @@ def clear(): # This method resets the database
     ref = db.reference('/Data')
     users_ref = ref.child('Role')
     users_ref.set({
-        'UUID: {
+        'UUID': {
             'RoleName': ' ',
             'RoleID': ' '
             }
