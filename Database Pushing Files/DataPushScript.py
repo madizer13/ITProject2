@@ -78,7 +78,12 @@ def clear(): # This method resets the database
             'SecondNight': ' ',
             'DayLandings': ' ',
             'NightLandings': ' ',
-            'FlightID': ' '
+            'FlightID': ' ',
+            'ILS': ' ',
+            'VOR': ' ',
+            'NDB': ' ',
+            'Circling': ' ',
+            'NoSlope': ' '
             }
         })
 
