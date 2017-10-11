@@ -1,13 +1,7 @@
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { SettingsPage } from '../settings/settings';
-
-/**
- * Generated class for the AddpersonPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { FormBuilder, Validators } from '@angular/forms';
+import { IonicPage, NavController, ViewController } from 'ionic-angular';
 
 @IonicPage({name: 'addperson'})
 @Component({
@@ -16,11 +10,55 @@ import { SettingsPage } from '../settings/settings';
 })
 export class AddpersonPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public form              : any;
+  public Name              : any = '';
+  public Role              : any = [];
+  public person            : FirebaseListObservable<any[]>;
+
+  public isEditable        : boolean = false;
+
+  constructor(
+    public navCtrl        : NavController, 
+    private _FB 	        : FormBuilder,
+    private _FIRE         : AngularFireDatabase,
+    public viewCtrl       : ViewController
+
+  ) 
+  
+  {
+    this.form = _FB.group({
+      'name'           : ['', Validators.required],
+      'role'           : ['', Validators.required],
+     
+   });
+
+   this.person = _FIRE.list('/Data/Person');
+          
+  }
+  saveMovie(value)
+  {
+      let name               : string = this.form.controls["name"].value,
+          role               : string = this.form.controls["role"].value
+          
+
+     this.person.push({
+         Name: name,
+         Role: role
+         
+     })
+     
+     this.closeAddperson();
+     this.addperson();
   }
 
-  goBack():void{
-    this.navCtrl.setRoot(SettingsPage);
+  addperson()
+  {
+      let nav = this.navCtrl.setRoot('addperson');
   }
+
+  closeAddperson(){
+    this.viewCtrl.dismiss();
+  }
+  
 
 }
