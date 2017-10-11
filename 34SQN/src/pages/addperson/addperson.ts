@@ -9,7 +9,7 @@ import { SettingsPage } from '../settings/settings';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+@IonicPage({name: 'addperson'})
 @Component({
   selector: 'page-addperson',
   templateUrl: 'addperson.html',
