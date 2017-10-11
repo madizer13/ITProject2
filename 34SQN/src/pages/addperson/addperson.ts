@@ -12,7 +12,8 @@ export class AddpersonPage {
 
   public form              : any;
   public Name              : any = '';
-  public Role              : any = [];
+  public PersonID          : any = '';
+  public RoleID              : any = [];
   public person            : FirebaseListObservable<any[]>;
 
   public isEditable        : boolean = false;
@@ -28,7 +29,8 @@ export class AddpersonPage {
   {
     this.form = _FB.group({
       'name'           : ['', Validators.required],
-      'role'           : ['', Validators.required],
+      'personID'       : ['',Validators.required],
+      'roleID'           : ['', Validators.required],
      
    });
 
@@ -38,12 +40,14 @@ export class AddpersonPage {
   saveMovie(value)
   {
       let name               : string = this.form.controls["name"].value,
-          role               : string = this.form.controls["role"].value
+          personID           : string = this.form.controls["porsonID"].value,
+          roleID             : string = this.form.controls["role"].value
           
 
      this.person.push({
          Name: name,
-         Role: role
+         PersonID: personID,
+         RoleID: roleID
          
      })
      
