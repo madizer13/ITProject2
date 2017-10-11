@@ -28,10 +28,15 @@
           <ion-label stacked>Name:</ion-label>
           <ion-input type="text" formControlName="name" [(ngModel)]="Name"></ion-input>
         </ion-item>
+      
+        <ion-item>
+                <ion-label stacked>PersonID:</ion-label>
+                <ion-input type="text" formControlName="personID" [(ngModel)]="PersonID"></ion-input>
+        </ion-item>
 
         <ion-item>
-          <ion-label stacked>Role:</ion-label>
-          <ion-select formControlName="role" multiple="true" [(ngModel)]="Role">
+          <ion-label stacked>RoleID:</ion-label>
+          <ion-select formControlName="roleID" multiple="true" [(ngModel)]="RoleID">
             <ion-option value="1">1-CL6 Captain</ion-option>
             <ion-option value="2">2-CL6 Co-Pilot</ion-option>
             <ion-option value="3">3-BBJ Captain</ion-option>
@@ -44,7 +49,9 @@
 
         <ion-item>
             <input type="hidden" name="name">
-            <input type="hidden" name="role"> 
+            <input type="hidden" name="personID">
+            <input type="hidden" name="roleID"> 
+          
 
             <button ion-button block color="primary" text-center [disabled]="!form.valid">
             <div *ngIf="!isEditable">
