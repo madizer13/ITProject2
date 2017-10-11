@@ -1,9 +1,15 @@
 <ion-header>
     <ion-toolbar>
         <ion-title>
-            Add a new Flight
+            Add Crew
         </ion-title>
-        <ion-buttons start>
+        <ion-buttons left>
+            <button ion-button icon-only (click)="goBack()">
+             <ion-icon name="arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+
+        <ion-buttons Right>
             <button ion-button color="primary" (click)="closeModal()">
             <span showWhen="ios">Cancel</span>
             <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
@@ -11,116 +17,422 @@
         </ion-buttons>
     </ion-toolbar>
 </ion-header>
+
 <ion-content>
-    <form [formGroup]="form" (ngSubmit)="saveMovie(form.value)">
-
-        <ion-item-divider color="light">
-            <div *ngIf="!isEditable">
-                Add a new flight
-            </div>
-
-            <div *ngIf="isEditable">
-                Amend this flight
-            </div>
-        </ion-item-divider>
+    <form [formGroup]="form" (ngSubmit)="saveCrew(form.value)">
 
 
-        <ion-item>
-            <ion-label stacked>Pilot name:</ion-label>
-            <ion-input type="text" formControlName="name" [(ngModel)]="pilotName"></ion-input>
-        </ion-item>
+        <ion-grid>
+            <ion-item stacked color="secondary">
+                <ion-title>Captain</ion-title>
+            </ion-item>
+            <ion-item color="primary">
+                <div block> Night </div>
+            </ion-item>
+            <ion-row>
+                <ion-col>
+                    <ion-item>
+                        <ion-label stacked>1st </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+                        <ion-label stacked> 2nd </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+
+                        <ion-label stacked> Dual </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-item>
+
+                        <ion-label stacked> Takeoff </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+
+                        <ion-label stacked> Landing </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+            </ion-row>
 
 
 
-        <ion-item>
-            <ion-label stacked>Flight Duration:</ion-label>
-            <ion-input type="text" formControlName="duration" [(ngModel)]="flightDuration"></ion-input>
-        </ion-item>
+            <ion-item color="light">
+                <ion-title>Approaches</ion-title>
+            </ion-item>
+            <ion-row>
+                <ion-col>
+                    <ion-item>
+                        <ion-label stacked>ILS </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+                        <ion-label stacked> VOR </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+
+                        <ion-label stacked> NDB </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+
+                        <ion-label stacked>Circling </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+
+                        <ion-label stacked> No slope</ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+            </ion-row>
 
 
 
-        <ion-item>
-            <ion-label stacked>Type of Flight:</ion-label>
-            <ion-select formControlName="type" multiple="true" [(ngModel)]="flighttype">
-                <ion-option value="Jet">Challenger</ion-option>
-                <ion-option value="BBJ">BBJ</ion-option>
-
-            </ion-select>
-        </ion-item>
 
 
+            <ion-item color="primary">
+                <div block>Day </div>
+            </ion-item>
+            <ion-row>
+                <ion-col>
+                    <ion-item>
+                        <ion-label stacked>1st </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+                        <ion-label stacked> 2nd </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
 
-        <ion-item>
-            <ion-label stacked>Crew Member:</ion-label>
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+
+                        <ion-label stacked> 3rd </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-item>
+
+                        <ion-label stacked> Takeoff </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+
+                        <ion-label stacked> Landing </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+            <ion-item color="light">
+                <ion-title>Approaches</ion-title>
+            </ion-item>
+            <ion-row>
+                <ion-col>
+                    <ion-item>
+                        <ion-label stacked>ILS </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+                        <ion-label stacked> VOR </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+
+                        <ion-label stacked> NDB </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+
+                        <ion-label stacked>Circling </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+
+                        <ion-label stacked> No slope</ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+
+
+
+        </ion-grid>
+
+        --! co-pilot inteface items!--
+        <ion-grid>
+            <ion-item stacked color="secondary">
+                <ion-title>co-Pilot</ion-title>
+            </ion-item>
+            <ion-item color="primary">
+                <div block> Night </div>
+            </ion-item>
+            <ion-row>
+                <ion-col>
+                    <ion-item>
+                        <ion-label stacked>1st </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+                        <ion-label stacked> 2nd </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+
+                        <ion-label stacked> Dual </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-item>
+
+                        <ion-label stacked> Takeoff </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+
+                        <ion-label stacked> Landing </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+
+
+            <ion-item color="light">
+                <ion-title>Approaches</ion-title>
+            </ion-item>
+            <ion-row>
+                <ion-col>
+                    <ion-item>
+                        <ion-label stacked>ILS </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+                        <ion-label stacked> VOR </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+
+                        <ion-label stacked> NDB </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+
+                        <ion-label stacked>Circling </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+
+                        <ion-label stacked> No slope</ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+
+
+
+
+            <ion-item color="primary">
+                <div block>Day </div>
+            </ion-item>
+            <ion-row>
+                <ion-col>
+                    <ion-item>
+                        <ion-label stacked>1st </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+                        <ion-label stacked> 2nd </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+
+                        <ion-label stacked> 3rd </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-item>
+
+                        <ion-label stacked> Takeoff </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+
+                        <ion-label stacked> Landing </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+            <ion-item color="light">
+                <ion-title>Approaches</ion-title>
+            </ion-item>
+            <ion-row>
+                <ion-col>
+                    <ion-item>
+                        <ion-label stacked>ILS </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+                        <ion-label stacked> VOR </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+
+                        <ion-label stacked> NDB </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+
+                        <ion-label stacked>Circling </ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+
+                        <ion-label stacked> No slope</ion-label>
+                        <ion-input type="text" formControlName="first" [(ngModel)]="First"></ion-input>
+
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+
+
+
+        </ion-grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <ion-item color="primary">
+            <ion-title> Add crew </ion-title>
+            <ion-label stacked> Add crew </ion-label>
             <ion-select formControlName="crew" multiple="true" [(ngModel)]="crewpilot">
-                <ion-option value="Keanu Reeves">Keanu Reeves</ion-option>
-                <ion-option value="Ian McShane">Ian McShane</ion-option>
-                <ion-option value="Adrianne Palicki">Adrianne Palicki</ion-option>
-                <ion-option value="Woody Harrelson">Woody Harrelson</ion-option>
-                <ion-option value="Willem Dafoe">Willem Dafoe</ion-option>
-                <ion-option value="John Leguizamo">John Leguizamo</ion-option>
-                <ion-option value="Michael Nyqvist">Michael Nyqvist</ion-option>
-                <ion-option value="Bridget Moynahan">Bridget Moynahan</ion-option>
-                <ion-option value="Alfie Allen">Alfie Allen</ion-option>
-                <ion-option value="Russell Crowe">Russell Crowe</ion-option>
-                <ion-option value="Oliver Reed">Oliver Reed</ion-option>
-                <ion-option value="March">Joaquin Phoenix</ion-option>
-                <ion-option value="Ryan">Connie Nielsen</ion-option>
-                <ion-option value="Sarah">Ralf Moeller</ion-option>
-                <ion-option value="Tom Hanks">Tom Hanks</ion-option>
-                <ion-option value="Leonardo Dicaprio">Leonardo Dicaprio</ion-option>
-                <ion-option value="Christopher Walken">Christopher Walken</ion-option>
-                <ion-option value="Phelps">Mike Myers</ion-option>
-                <ion-option value="Heather Graham">Heather Graham</ion-option>
-                <ion-option value="Prentice">Verne Troyer</ion-option>
-                <ion-option value="Robert Wagner">Robert Wagner</ion-option>
-                <ion-option value="Lauren">Rob Lowe</ion-option>
-                <ion-option value="Mindy Sterling">Mindy Sterling</ion-option>
+                <ion-option value="">put your code to take input from the database </ion-option>
+                <ion-option value="put your code to take input from the database">Ian McShane</ion-option>
             </ion-select>
         </ion-item>
 
 
 
 
-        <ion-item>
-            <ion-label stacked>Summary:</ion-label>
-            <ion-textarea rows="6" formControlName="summary" [(ngModel)]="flightSummary"></ion-textarea>
-        </ion-item>
-
-
-
-        <ion-item>
-            <ion-label stacked>Flight number :</ion-label>
-            <ion-select formControlName="flightRating" [(ngModel)]="flightRaating">
-                <ion-option value="1">1</ion-option>
-                <ion-option value="2">2</ion-option>
-                <ion-option value="3">3</ion-option>
-                <ion-option value="4">4</ion-option>
-                <ion-option value="5">5</ion-option>
-
-            </ion-select>
-        </ion-item>
-
-
-
-        <ion-item>
-            <ion-label> Date </ion-label>
-            <ion-datetime displayFormat="MM/DD/YYYY" formControlName="year" [(ngModel)]="flyYear"></ion-datetime>
-        </ion-item>
-
-
-        <ion-item>
-            <input type="hidden" name="flightId">
-
-            <button ion-button block color="primary" text-center [disabled]="!form.valid">
-            <div *ngIf="!isEditable">
-               Add a new flight
-            </div>
-
-            <div *ngIf="isEditable">
-               Update this flight
-            </div>
-         </button>
-        </ion-item>
 
     </form>
+
+
+
+
+</ion-content>

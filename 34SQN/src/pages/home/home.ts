@@ -57,6 +57,10 @@ export class HomePage {
   let nav= this.navCtrl.setRoot('settings');
 
 }
+addcrew(){
+  let nav= this.navCtrl.setRoot('addCrew');
+
+}
 
 
    deleteFlight(movie : any)

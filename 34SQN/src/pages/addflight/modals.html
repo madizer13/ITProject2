@@ -4,7 +4,7 @@
             Add a new Flight
         </ion-title>
         <ion-buttons start>
-            <button ion-button color="primary" (click)="closeModal()">
+            <button ion-button color="primary" (click)="goBack()">
             <span showWhen="ios">Cancel</span>
             <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
          </button>
@@ -24,14 +24,14 @@
             </div>
         </ion-item-divider>
         <ion-item>
-          <ion-label> Departure Date </ion-label>
-          <ion-datetime displayFormat="DD-MM-YYYYTHH:mm" pickerFormat="DD-MMM-YYYYTHH:mm" formControlName="year" [(ngModel)]="flyYear"></ion-datetime>
+            <ion-label> Departure Date </ion-label>
+            <ion-datetime displayFormat="DD-MM-YYYYTHH:mm" pickerFormat="DD-MMM-YYYYTHH:mm" formControlName="year" [(ngModel)]="flyYear"></ion-datetime>
         </ion-item>
 
-      <ion-item>
-        <ion-label> Arrival Date </ion-label>
-        <ion-datetime displayFormat="DD-MM-YYYYTHH:mm" pickerFormat="DD-MMM-YYYYTHH:mm" formControlName="duration" [(ngModel)]="flightduration"></ion-datetime>
-      </ion-item>
+        <ion-item>
+            <ion-label> Arrival Date </ion-label>
+            <ion-datetime displayFormat="DD-MM-YYYYTHH:mm" pickerFormat="DD-MMM-YYYYTHH:mm" formControlName="duration" [(ngModel)]="flightduration"></ion-datetime>
+        </ion-item>
 
         <ion-item>
             <ion-label stacked>Type of Flight:</ion-label>
@@ -43,36 +43,36 @@
         </ion-item>
 
         <ion-item>
-          <ion-label stacked>FlightID:</ion-label>
-          <ion-input type="text" formControlName="flightID" [(ngModel)]="FlightID"></ion-input>
+            <ion-label stacked>FlightID:</ion-label>
+            <ion-input type="text" formControlName="flightID" [(ngModel)]="FlightID"></ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-label stacked>Departure Airport:</ion-label>
-          <ion-input type="text" formControlName="departureAirport" [(ngModel)]="DAirport"></ion-input>
+            <ion-label stacked>Departure Airport:</ion-label>
+            <ion-input type="text" formControlName="departureAirport" [(ngModel)]="DAirport"></ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-label stacked>Arrival Airport:</ion-label>
-          <ion-input type="text" formControlName="arrivalAirport" [(ngModel)]="AAirport"></ion-input>
+            <ion-label stacked>Arrival Airport:</ion-label>
+            <ion-input type="text" formControlName="arrivalAirport" [(ngModel)]="AAirport"></ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-label stacked>Takeoff Type:</ion-label>
-          <ion-select formControlName="takeOffType" multiple="false" [(ngModel)]="tType">
-            <ion-option value="OptionOne">Option1</ion-option>
-            <ion-option value="OptionTwo">Option2</ion-option>
+            <ion-label stacked>Takeoff Type:</ion-label>
+            <ion-select formControlName="takeOffType" multiple="false" [(ngModel)]="tType">
+                <ion-option value="OptionOne">Option1</ion-option>
+                <ion-option value="OptionTwo">Option2</ion-option>
 
-          </ion-select>
+            </ion-select>
         </ion-item>
 
         <ion-item>
-          <ion-label stacked>Landing Type:</ion-label>
-          <ion-select formControlName="landingType" multiple="false" [(ngModel)]="lType">
-            <ion-option value="OptionOne">Option1</ion-option>
-            <ion-option value="OptionTwo">Option2</ion-option>
+            <ion-label stacked>Landing Type:</ion-label>
+            <ion-select formControlName="landingType" multiple="false" [(ngModel)]="lType">
+                <ion-option value="OptionOne">Option1</ion-option>
+                <ion-option value="OptionTwo">Option2</ion-option>
 
-          </ion-select>
+            </ion-select>
         </ion-item>
 
         <ion-item>
@@ -80,15 +80,15 @@
             <ion-textarea rows="6" formControlName="summary" [(ngModel)]="flightSummary"></ion-textarea>
         </ion-item>
 
-      <ion-item>
-        <ion-label fixed>Night Flight</ion-label>
-        <ion-checkbox formControlName="nightflight"></ion-checkbox>
-      </ion-item>
+        <ion-item>
+            <ion-label fixed>Night Flight</ion-label>
+            <ion-checkbox formControlName="nightflight"></ion-checkbox>
+        </ion-item>
 
-      <ion-item>
-        <ion-label fixed>VIP</ion-label>
-        <ion-checkbox formControlName="vip"></ion-checkbox>
-      </ion-item>
+        <ion-item>
+            <ion-label fixed>VIP</ion-label>
+            <ion-checkbox formControlName="vip"></ion-checkbox>
+        </ion-item>
 
         <ion-item>
             <input type="hidden" name="flightId">

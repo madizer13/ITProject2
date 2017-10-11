@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IonicPage, NavController, ModalController, ViewController, NavParams } from 'ionic-angular';
 import firebase from 'firebase/app';
+import { HomePage } from '../home/home';
 
 @IonicPage(
     {
@@ -96,9 +97,21 @@ export class Modals {
    {
        let nav = this.navCtrl.setRoot('addCrew');
    }
-    
-   closeModal()
+   
+   /*
+   this method will close the page and new pagewill be opened on request
+   */
+   closeModal(){
+    this.viewCtrl.dismiss();
+   }
+
+/*
+   this method will cancel the add flight 
+    and will navigate back to the main page
+   */
+   goBack()
    {
-      this.viewCtrl.dismiss();
+      
+      this.navCtrl.setRoot(HomePage);
    }
 }
