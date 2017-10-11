@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "task-updateCurrencies",
+      "appliesTo": "34SQN/src/pages/updateCurrencies/updateCurrencies.html",
+      "type": "launch"
+    }
+  ]
+}
