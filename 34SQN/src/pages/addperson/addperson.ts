@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { SettingsPage } from '../settings/settings';
 
 /**
  * Generated class for the AddpersonPage page.
@@ -18,8 +19,8 @@ export class AddpersonPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AddpersonPage');
+  goBack():void{
+    this.navCtrl.setRoot(SettingsPage);
   }
 
 }
