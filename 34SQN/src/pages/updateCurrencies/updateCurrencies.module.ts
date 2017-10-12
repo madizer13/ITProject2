@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { UpdateCurrenciesPage } from './updateCurrencies';
+import { UpdateCurrencies } from './updateCurrencies';
 
 @NgModule({
   declarations: [
-    UpdateCurrenciesPage,
+    UpdateCurrencies,
   ],
   imports: [
-    IonicPageModule.forChild(UpdateCurrenciesPage),
+    IonicPageModule.forChild(UpdateCurrencies),
   ],
 })
 export class UpdateCurrenciesPageModule {}
