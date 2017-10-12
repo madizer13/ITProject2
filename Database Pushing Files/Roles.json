@@ -1,0 +1,29 @@
+{
+	"xml": {
+		"items": {
+      "item": [
+        {
+          "roleName": "CL6 Captain",
+          "roleID": "1"
+        },
+        {
+          "roleName": "CL6 Co-Pilot",
+          "roleID": "2"
+        },
+        {
+          "roleName": "BBJ Captain",
+          "roleID": "3"
+        },
+        {
+          "roleName": "BBJ Co-Pilot",
+          "roleID": "4"
+        },
+        {
+          "roleName": "Crew",
+          "roleID": "5"
+        }
+      ]
+		},
+		"_xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance"
+	}
+}

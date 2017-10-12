@@ -134,8 +134,7 @@ def loadPersonData(): # This method loads all the data into the Person table fro
             print(("#" * percentile) + (" " * (100 - percentile)) + " " + str(percentile) +"% Completed", end='\r')
             startPoint = startPoint + 1 # Used to iterate through the JSON
         except IndexError: # This error is thrown upon reaching the end of the JSON
-            print("\n---------------------------------------")
-            print("------------END OF JSON----------------")
+            print("\r" + ("#" * 100) + " " + "100% Completed")
             stopper = True # Ends the while loop
 
 def loadCurrencyData(): # This method works identically as the loadPersonData() method however loads currency data
@@ -167,8 +166,7 @@ def loadCurrencyData(): # This method works identically as the loadPersonData() 
             startPoint = startPoint + 1
  
         except IndexError:
-            print("\n---------------------------------------")
-            print("------------END OF JSON----------------")
+            print("\r" + ("#" * 100) + " " + "100% Completed")
             stopper = True
 
 def loadRoleData(): # This method works identically as the loadPersonData() method however loads currency data
@@ -197,8 +195,7 @@ def loadRoleData(): # This method works identically as the loadPersonData() meth
             print(("#" * percentile) + (" " * (100 - percentile)) + " " + str(percentile) +"% Completed", end='\r')
             startPoint = startPoint + 1
         except IndexError:
-            print("\n---------------------------------------")
-            print("------------END OF JSON----------------")
+            print("\r" + ("#" * 100) + " " + "100% Completed")
             stopper = True
 
 def main(): # Main method for controlling the program
