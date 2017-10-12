@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Update Currencies</ion-title>
+    <ion-title>UpdateCurrencies</ion-title>
     <ion-buttons left>
       <button ion-button icon-only (click)="goBack()">
         <ion-icon name="arrow-back"></ion-icon>
@@ -14,14 +14,19 @@
 <ion-content padding>
   <ion-list>
     <ion-item>
-      <ion-label>Select Person</ion-label>
-      <ion-select [(ngModel)]="title" (ionChange)="search(title)">
+      <ion-label fixed>First Name</ion-label>
+      <ion-input type="text" [(ngModel)]="firstName"></ion-input>
+    </ion-item>
 
-        <ion-option>
-          <ion-input placeholder="name"></ion-input>
-        </ion-option>
-      </ion-select>
+    <ion-item>
+      <ion-label fixed>Last Name</ion-label>
+      <ion-input type="text" [(ngModel)]="lastName"></ion-input>
     </ion-item>
   </ion-list>
+
+  <button ion-button block (click)="createPerson(firstName, lastName)">
+    Search Person
+  </button>
+
 
 </ion-content>
