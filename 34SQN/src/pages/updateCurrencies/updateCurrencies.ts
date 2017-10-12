@@ -55,37 +55,7 @@ export class UpdateCurrencies {
             });
 
     }
-
-    search(Flight: string) {
-        this.Flight = this.databa.list('random', {
-            query: {
-                orederByChild: name,
-                equalTo: name
-            },
-
-        }
-        );
-
-
-
-    }
-    gaming = {
-        name: 'flight',
-        date: 'Select date',
-        duration: 'hours'
-    };
-
-
-    logbook = {
-        Placeholder: "  ",
-    };
-
-    editFlight(flight) {
-        let params = { flight: flight, isEdited: true },
-            modal = this.modalCtrl.create('Modals', params);
-
-        modal.present();
-    }
+ 
 
     goBack(): void {
         this.navCtrl.setRoot(HomePage);
