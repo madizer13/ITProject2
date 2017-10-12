@@ -12,11 +12,9 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-  <ion-list>
-    <ion-item *ngFor="let person of people">
-      <h2> {{ people.Name }} </h2>
-      <h3> Code: <strong>{{ people.Name }}</strong> </h3>
-    </ion-item>
-  </ion-list>
+ <ion-list inset>
+  <button ion-item *ngFor="let person of people | async" (click)="changeCurrencies(person.$key, person.Name)">
+    {{ person.Name }}
+  </button> 
+</ion-list>
 </ion-content>
