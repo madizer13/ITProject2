@@ -10,55 +10,38 @@ import { IonicPage, NavController, NavParams, ModalController, Platform } from '
 
 
 @IonicPage({
-    name: 'updateCurrencies'
+name: 'updateCurrencies'
 })
 @Component({
-    selector: 'page-updateCurrencies',
-    templateUrl: 'updateCurrencies.html',
+selector: 'page-updateCurrencies',
+templateUrl: 'updateCurrencies.html',
 
-    })
+})
 
-    //CURRENTLY COPIED FROM THE SEARCH FUNCTION PAGE, MAKING CHANGES TO SEARCH CURRENCIES INSTEAD OF FLIGHTS
+//CURRENTLY COPIED FROM THE SEARCH FUNCTION PAGE, MAKING CHANGES TO SEARCH CURRENCIES INSTEAD OF FLIGHTS
 export class UpdateCurrencies {
-    public Flight: FirebaseListObservable<any[]>;
-    title: any;
-
-    constructor(public navCtrl: NavController,
+  public people: FirebaseListObservable<any>;
+  constructor(public navCtrl: NavController,
         private modalCtrl: ModalController,
         public params: NavParams,
-        private databa: AngularFireDatabase,
+        private db: AngularFireDatabase,
         private platform: Platform,
-    ) {
-        this.Flight = databa.list('/random');
+  ) {
+      this.getPeople();
+  }
 
-        if (params.get('isEdited')) {
-            let flight = params.get('flight'),
-                Flight = {
-                    name: 'flight',
-                    date: 'Select date',
-                    duration: 'hours'
-                };
-        }
+  getPeople(): FirebaseListObservable<any> {
+      return this.db.list('/Data/Person/', {
+          query: {
+              orderByChild: 'Name'
+          }
+      });
+  }
 
-        var ref = firebase.database().ref("flight");
-        //ref.orderByKey().endAt("23").on("child_added"), function (snapshot){
-        //console.log(snapshot.key);
-        // };
 
-    }
 
-    ionViewDidLoad() {
-        console.log('ionViewDidLoad SearchPage');
-        this.platform.ready()
-            .then(() => {
-                this.Flight = this.databa.list('/title');
-            });
 
-    }
- 
-
-    goBack(): void {
-        this.navCtrl.setRoot(HomePage);
-    }
-
+goBack(): void {
+     this.navCtrl.setRoot(HomePage);
+}
 }

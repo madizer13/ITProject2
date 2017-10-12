@@ -19,19 +19,13 @@ export class SettingsPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad SettingsPage');
   }
-<<<<<<< HEAD
+
   addcurrency() { }
 
   addperson() {
     let nav = this.navCtrl.setRoot('addperson');
   }
 
-=======
-  addcurrency(){}
-  addperson() {
-      let nav = this.navCtrl.setRoot('addperson');
-  }
->>>>>>> 6a0b3dac72257d20fe04594b603ddcd0fc8a9065
   goBack():void{
     this.navCtrl.setRoot(HomePage);
   }

@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\pages",
+    "\\src\\pages\\addflight",
+    "\\src\\pages\\home",
+    "\\src\\pages\\settings",
+    "\\src\\pages\\updateCurrencies"
+  ],
+  "SelectedNode": "\\src\\pages\\home\\home.ts",
+  "PreviewInSolutionExplorer": false
+}

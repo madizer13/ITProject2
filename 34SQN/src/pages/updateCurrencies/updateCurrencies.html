@@ -12,21 +12,11 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
   <ion-list>
-    <ion-item>
-      <ion-label fixed>First Name</ion-label>
-      <ion-input type="text" [(ngModel)]="firstName"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label fixed>Last Name</ion-label>
-      <ion-input type="text" [(ngModel)]="lastName"></ion-input>
+    <ion-item *ngFor="let person of people">
+      <h2> {{ people.Name }} </h2>
+      <h3> Code: <strong>{{ people.Name }}</strong> </h3>
     </ion-item>
   </ion-list>
-
-  <button ion-button block (click)="createPerson(firstName, lastName)">
-    Search Person
-  </button>
-
-
 </ion-content>

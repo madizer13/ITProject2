@@ -6,85 +6,65 @@ import 'rxjs/add/operator/map';
 import * as firebase from 'firebase/app';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+selector: 'page-home',
+templateUrl: 'home.html'
 })
 export class HomePage {
 
-   public Flight   : FirebaseListObservable<any[]>;
+  public Flight   : FirebaseListObservable<any[]>;
 
+  constructor(public navCtrl: NavController,
+      private angFire: AngularFireDatabase,
+      private modalCtrl: ModalController,
+      private platform: Platform) {
 
-   constructor(public navCtrl    : NavController,
-               private angFire   : AngularFireDatabase,
-               private modalCtrl : ModalController,
-               private platform  : Platform)
-   {
-
-   }
-
-
-/* shows whats on the screen
-   ionViewDidLoad()
-   {
-      this.platform.ready()
-      .then(() =>
-      {
-         this.Flight= this.angFire.list('/flights');
-      });
-   }
-*/
-
-
-   addRecord()
-   {
-      let modal = this.modalCtrl.create('Modals');
-      modal.present();
-   }
-
-   logout() { 
-    let nav = this.navCtrl.setRoot('login');    
   }
-  search() { 
-    let nav = this.navCtrl.setRoot('search');    
+
+
+  addRecord()
+  {
+    let modal = this.modalCtrl.create('Modals');
+    modal.present();
   }
+
+  logout() { 
+  let nav = this.navCtrl.setRoot('login');    
+}
+search() { 
+  let nav = this.navCtrl.setRoot('search');    
+}
 
   
-   statistics(){
+  statistics(){
 
-    let nav= this.navCtrl.setRoot('statistics');
-   }
-    settings(){
-    let nav= this.navCtrl.setRoot('settings');
+  let nav= this.navCtrl.setRoot('statistics');
+  }
+  settings(){
+  let nav= this.navCtrl.setRoot('settings');
 
-    }
-    addcrew()
-    {
-      let nav= this.navCtrl.setRoot('addCrew');
-    }
-
-  updateCurrencies()
+  }
+  addcrew()
   {
-    let nav = this.navCtrl.setRoot('updateCurrencies')
+    let nav= this.navCtrl.setRoot('addCrew');
   }
 
+  deleteFlight(movie : any)
+  {
+    this.Flight.remove(movie);
+  }
 
-   deleteFlight(movie : any)
-   {
-      this.Flight.remove(movie);
-   }
-
-   updateCurrencies() {
-       let nav = this.navCtrl.setRoot('updateCurrencies');
-   }
+  updateCurrencies() {
+      let nav = this.navCtrl.setRoot('updateCurrencies');
+  }
 
 
 }
 
 /* 
- <div class="manage-record" padding>
+<div class="manage-record" padding>
 
-        <button ion-button text-center color="primary" (click)="editFlight(flight)">Edit</button>
+      <button ion-button text-center color="primary" (click)="editFlight(flight)">Edit</button>
 
-        <button ion-button text-center color="danger" (click)="deleteFlight(flight)">Delete</button>
-    </div>
+      <button ion-button text-center color="danger" (click)="deleteFlight(flight)">Delete</button>
+  </div>
 */
