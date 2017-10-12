@@ -1,16 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\34SQN",
-    "\\34SQN\\resources",
-    "\\34SQN\\resources\\android",
-    "\\34SQN\\src",
-    "\\34SQN\\src\\app",
     "\\34SQN\\src\\pages",
-    "\\34SQN\\src\\pages\\home",
+    "\\34SQN\\src\\pages\\addCrew",
+    "\\34SQN\\src\\pages\\addflight",
+    "\\34SQN\\src\\pages\\flight",
+    "\\34SQN\\src\\pages\\login",
+    "\\34SQN\\src\\pages\\search",
     "\\34SQN\\src\\pages\\settings",
-    "\\34SQN\\src\\pages\\statistics"
+    "\\34SQN\\src\\pages\\signup",
+    "\\Database Pushing Files"
   ],
-  "SelectedNode": "\\34SQN\\src\\pages\\home\\home.html",
   "PreviewInSolutionExplorer": false
 }
