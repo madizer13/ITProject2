@@ -68,6 +68,11 @@ addcrew(){
       this.Flight.remove(movie);
    }
 
+   updateCurrencies() {
+       let nav = this.navCtrl.setRoot('updateCurrencies');
+   }
+
+
 }
 
 /* 
