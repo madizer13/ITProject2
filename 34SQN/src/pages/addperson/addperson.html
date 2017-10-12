@@ -13,16 +13,6 @@
 </ion-header>
 <ion-content>
     <form [formGroup]="form" (ngSubmit)="saveMovie(form.value)">
-
-        <ion-item-divider color="light">
-            <div *ngIf="!isEditable">
-                Add Person
-            </div>
-
-            <div *ngIf="isEditable">
-                Amend this person
-            </div>
-        </ion-item-divider>
   
         <ion-item>
           <ion-label stacked>Name:</ion-label>
@@ -35,33 +25,24 @@
         </ion-item>
 
         <ion-item>
-          <ion-label stacked>RoleID:</ion-label>
-          <ion-select formControlName="roleID" multiple="true" [(ngModel)]="RoleID">
-            <ion-option value="1">1-CL6 Captain</ion-option>
-            <ion-option value="2">2-CL6 Co-Pilot</ion-option>
-            <ion-option value="3">3-BBJ Captain</ion-option>
-            <ion-option value="4">4-BBJ Co-Pilot</ion-option>
-            <ion-option value="5">5-Crew</ion-option>
-
-
-          </ion-select>
-        </ion-item>
-
+                <ion-label stacked>RoleID:</ion-label>
+                <ion-select formControlName="roleID" multiple="true" [(ngModel)]="RoleID">
+                  <ion-option value="1">1-CL6 Captain</ion-option>
+                  <ion-option value="2">2-CL6 Co-Pilot</ion-option>
+                  <ion-option value="3">3-BBJ Captain</ion-option>
+                  <ion-option value="4">4-BBJ Co-Pilot</ion-option>
+                  <ion-option value="5">5-Crew</ion-option>
+                </ion-select>
+              </ion-item>
+    
         <ion-item>
             <input type="hidden" name="name">
             <input type="hidden" name="personID">
             <input type="hidden" name="roleID"> 
-          
-
+        
             <button ion-button block color="primary" text-center [disabled]="!form.valid">
-            <div *ngIf="!isEditable">
                Add Person
-            </div>
-
-            <div *ngIf="isEditable">
-               Update this person
-            </div>
-         </button>
+            </button>
         </ion-item>
 
     </form>
