@@ -24,7 +24,6 @@ export class SettingsPage {
     let nav = this.navCtrl.setRoot('addperson');
   }
 
-
   addcurrency() { }
 
   goBack():void{
