@@ -14,7 +14,7 @@ export class AddpersonPage {
   public form              : any;
   public Name              : any = '';
   public PersonID          : any = '';
-  public RoleID            : any = [''];
+  public PersonRoleID      : any = [''];
   public pers            : FirebaseListObservable<any[]>;
   
 
@@ -54,7 +54,7 @@ export class AddpersonPage {
      this.pers.push({
          Name: name,
          PersonID: personID,
-         RoleID: roleIDs,
+         PersonRoleID: roleIDs,
          
      })
      
