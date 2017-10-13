@@ -54,13 +54,18 @@ export class HomePage {
     let nav= this.navCtrl.setRoot('statistics');
    }
     settings(){
-  let nav= this.navCtrl.setRoot('settings');
+    let nav= this.navCtrl.setRoot('settings');
 
-}
-addcrew(){
-  let nav= this.navCtrl.setRoot('addCrew');
+    }
+    addcrew()
+    {
+      let nav= this.navCtrl.setRoot('addCrew');
+    }
 
-}
+  updateCurrencies()
+  {
+    let nav = this.navCtrl.setRoot('updateCurrencies')
+  }
 
 
    deleteFlight(movie : any)

@@ -29,9 +29,6 @@ export class Modals {
    public FlightId          : any     = '';
    public AAirport          : any     = '';
    public DAirport          : any     = '';
-   public aType             : any     = [];
-   public tType             : any     = [];
-   public lType             : any     = [];
     
    public isEditable        : boolean = false;
    public iterator          : number  = 1;
@@ -56,9 +53,7 @@ export class Modals {
          'vip'              : ['false'],
          'flightID'         : ['', Validators.required],
          'arrivalAirport'   : ['', Validators.required],
-         'departureAirport' : ['', Validators.required],
-         'takeOffType'      : ['', Validators.required],
-         'landingType'      : ['', Validators.required]
+         'departureAirport' : ['', Validators.required]
       });
       this.flights = this._FIRE.list('/Data/Flight');
       this.userProfile = firebase.database().ref('/Data/Flight');
