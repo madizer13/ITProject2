@@ -21,7 +21,7 @@ def clear(): # This method resets the database
         'UUID': {
           'PersonID': ' ',
           'Name': ' ',
-          'RoleID': ' '
+          'PersonRoleID': ' '
             }
         })
     # Rest of this method follows the above format for each table
@@ -126,7 +126,7 @@ def loadPersonData(): # This method loads all the data into the Person table fro
 
             ref.push({ # Adding a name and role to the PMKeys reference
                 'Name' : name,
-                'id(Role)' : role,
+                'PersonRoleID' : role,
                 'PersonID': pmkeys
                 })       
 
@@ -231,7 +231,6 @@ def main(): # Main method for controlling the program
     else:
         print("Not a valid option")
         main()
-
 
 if __name__ == '__main__':
         main()
