@@ -34,7 +34,7 @@ export class Chooseperson {
  selectOption(personKey, personName, personRole)
   {
     let actionSheet = this.actionSheetCtrl.create({
-    title: 'What do you want to do for ' + personName + ' of role?',
+    title: 'What do you want to do for ' + personName + '?',
     buttons: [
       {
         text: 'View LogBook',
