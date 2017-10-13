@@ -53,8 +53,8 @@ search() {
     this.Flight.remove(movie);
   }
 
-  updateCurrencies() {
-      let nav = this.navCtrl.setRoot('updateCurrencies');
+  chooseperson() {
+      let nav = this.navCtrl.setRoot('chooseperson');
   }
 
 

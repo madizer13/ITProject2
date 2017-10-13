@@ -10,17 +10,16 @@ import { IonicPage, NavController, NavParams, ModalController, Platform, AlertCo
 
 
 @IonicPage({
-name: 'updateCurrencies'
+name: 'chooseperson'
 })
 @Component({
-selector: 'page-updateCurrencies',
-templateUrl: 'updateCurrencies.html',
+selector: 'page-chooseperson',
+templateUrl: 'chooseperson.html',
 
 })
 
-export class UpdateCurrencies {
+export class Chooseperson {
   public people: FirebaseListObservable<any>;
-  public selectedPerson: FirebaseObjectObservable<any>;
   constructor(public navCtrl: NavController,
         private modalCtrl: ModalController,
         public params: NavParams,
@@ -32,16 +31,21 @@ export class UpdateCurrencies {
       this.people = db.list('/Data/Person/');
   }
 
-  changeCurrencies(personID, personName)
+ selectOption(personID, personName)
   {
     let actionSheet = this.actionSheetCtrl.create({
-    title: 'What do you want to do?',
+    title: 'What do you want to do for ' + personName + '?',
     buttons: [
       {
         text: 'View LogBook',
         role: 'destructive',
         handler: () => {
           console.log("done1");
+        }
+      },{
+        text: 'View Currencies',
+        handler: () => {
+          console.log("done3");
         }
       },{
         text: 'Update Currencies',
