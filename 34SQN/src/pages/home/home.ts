@@ -62,16 +62,15 @@ export class HomePage {
       let nav= this.navCtrl.setRoot('addCrew');
     }
 
-  updateCurrencies()
-  {
-    let nav = this.navCtrl.setRoot('updateCurrencies')
-  }
-
-
    deleteFlight(movie : any)
    {
       this.Flight.remove(movie);
    }
+
+   updateCurrencies() {
+       let nav = this.navCtrl.setRoot('updateCurrencies');
+   }
+
 
 }
 
