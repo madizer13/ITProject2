@@ -48,16 +48,31 @@ search() {
     let nav= this.navCtrl.setRoot('addCrew');
   }
 
-  deleteFlight(movie : any)
-  {
-    this.Flight.remove(movie);
-  }
 
   chooseperson() {
       let nav = this.navCtrl.setRoot('chooseperson');
-  }
+  }  
+   statistics(){
 
+    let nav= this.navCtrl.setRoot('statistics');
+   }
+    settings(){
+    let nav= this.navCtrl.setRoot('settings');
 
+    }
+    addcrew()
+    {
+      let nav= this.navCtrl.setRoot('addCrew');
+    }
+
+   deleteFlight(movie : any)
+   {
+      this.Flight.remove(movie);
+   }
+
+   updateCurrencies() {
+       let nav = this.navCtrl.setRoot('updateCurrencies');
+   }
 }
 
 /* 

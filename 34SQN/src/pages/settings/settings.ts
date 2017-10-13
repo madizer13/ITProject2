@@ -20,11 +20,11 @@ export class SettingsPage {
     console.log('ionViewDidLoad SettingsPage');
   }
 
-  addcurrency() { }
-
   addperson() {
     let nav = this.navCtrl.setRoot('addperson');
   }
+
+  addcurrency() { }
 
   goBack():void{
     this.navCtrl.setRoot(HomePage);

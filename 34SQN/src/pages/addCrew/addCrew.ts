@@ -23,7 +23,51 @@ export class AddCrew {
    public flights          : FirebaseListObservable<any[]>;
    public shiftSelect       : any     = [];
    public crewpilot         :any    =[];
-   public First: any='';
+   public First: any = '';
+
+   public CapFirstNight: number = 0;
+   public CapSecondNight: number = 0;
+   public CapDualNight: number = 0;
+   public CaTakeoffNight: number = 0;
+   public CapLandingNight: number = 0;
+   public CapILSNight: number = 0;
+   public CapVORNight: number = 0;
+   public CapNDBNight: number = 0;
+   public CapCirclingNight: number = 0;
+   public CapNoSlopeNight: number = 0;
+   public CapFirstDay: number = 0;
+   public CapSecondDay: number = 0;
+   public CapDualDay: number = 0;
+   public CaTakeoffDay: number = 0;
+   public CapLandingDay: number = 0;
+   public CapILSDay: number = 0;
+   public CapVORDay: number = 0;
+   public CapNDBDay: number = 0;
+   public CapCirclingDay: number = 0;
+   public CapNoSlopeDay: number = 0;
+
+   public coFirstNight: number = 0;
+   public coSecondNight: number = 0;
+   public coDualNight: number = 0;
+   public coTakeoffNight: number = 0;
+   public coLandingNight: number = 0;
+   public coILSNight: number = 0;
+   public coVORNight: number = 0;
+   public coNDBNight: number = 0;
+   public coCirclingNight: number = 0;
+   public coNoSlopeNight: number = 0;
+   public coFirstDay: number = 0;
+   public coSecondDay: number = 0;
+   public coDualDay: number = 0;
+   public coTakeoffDay: number = 0;
+   public coLandingDay: number = 0;
+   public coILSDay: number = 0;
+   public coVORDay: number = 0;
+   public coNDBDay: number = 0;
+   public coCirclingDay: number = 0;
+   public coNoSlopeDay: number = 0;
+
+   public crew: any = ' ';
 
    constructor(
       public navCtrl        : NavController,
