@@ -30,9 +30,9 @@ export class HomePage {
   logout() { 
   let nav = this.navCtrl.setRoot('login');    
 }
-search() { 
-  let nav = this.navCtrl.setRoot('search');    
-}
+  search() { 
+    let nav = this.navCtrl.setRoot('search');    
+  }
 
   
   statistics(){
@@ -52,18 +52,6 @@ search() {
   chooseperson() {
       let nav = this.navCtrl.setRoot('chooseperson');
   }  
-   statistics(){
-
-    let nav= this.navCtrl.setRoot('statistics');
-   }
-    settings(){
-    let nav= this.navCtrl.setRoot('settings');
-
-    }
-    addcrew()
-    {
-      let nav= this.navCtrl.setRoot('addCrew');
-    }
 
    deleteFlight(movie : any)
    {
