@@ -31,10 +31,10 @@ export class Chooseperson {
       this.people = db.list('/Data/Person/');
   }
 
- selectOption(personID, personName)
+ selectOption(personKey, personName, personRole)
   {
     let actionSheet = this.actionSheetCtrl.create({
-    title: 'What do you want to do for ' + personName + '?',
+    title: 'What do you want to do for ' + personName + ' of role?',
     buttons: [
       {
         text: 'View LogBook',

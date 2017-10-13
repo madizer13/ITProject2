@@ -13,7 +13,7 @@
 
 <ion-content padding>
  <ion-list inset>
-  <button ion-item *ngFor="let person of people | async" (click)="selectOption(person.$key, person.Name)">
+  <button ion-item *ngFor="let person of people | async" (click)="selectOption(person.$key, person.Name, person.PersonRoleID)">
     {{ person.Name }}
   </button> 
 </ion-list>
