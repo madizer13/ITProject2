@@ -28,9 +28,9 @@ export class AddpersonPage {
   
   {
     this.form = _FB.group({
-      'name'           : ['',Validators.maxLength(30)],
-      'personID'       : ['',Validators.maxLength(10)],
-      'roleID'         : ['',Validators.maxLength(6)],
+      'name'           : ['',Validators.minLength(1) && Validators.maxLength(30)],
+      'personID'       : ['',Validators.minLength(4) && Validators.maxLength(10)],
+      'roleID'         : ['',Validators.minLength(1) && Validators.maxLength(6)],
      
    });
 
@@ -44,19 +44,25 @@ export class AddpersonPage {
           roleID             : any = this.form.controls["roleID"].value,
           k: any,
           roleIDs : string = '';
-      
+    
       for(k in roleID){
-        if ((k + 1) < roleID.length)
-        roleIDs = roleIDs + roleID[k] 
+        if (k < roleID.length-1)
+         roleIDs = roleIDs + roleID[k]+ ", " ;
+        else if(k=roleID.length-1)
+        roleIDs = roleIDs + roleID[k] ;
         else
-        roleIDs = roleIDs + ", " +roleID[k]
+          roleIDs = roleIDs + roleID[k]; 
       }
-     this.pers.push({
+    
+       
+    if(name!='' && personID !=''&& roleID!=''){
+       this.pers.push({
          Name: name,
          PersonID: personID,
-         PersonRoleID: roleIDs,
-         
-     })
+         PersonRoleID: roleIDs,   
+       })
+      
+    }
      
      this.closeAddperson();
      
