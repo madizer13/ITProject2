@@ -2,6 +2,7 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { IonicPage, NavController, ViewController } from 'ionic-angular';
+import { SettingsPage } from '../settings/settings';
 
 
 @IonicPage({name: 'addperson'})
@@ -64,12 +65,12 @@ export class AddpersonPage {
       
     }
      
-     this.closeAddperson();
+     this.goBack();
      
   }
 
-  closeAddperson(){
-    this.viewCtrl.dismiss();
+  goBack():void{
+    this.navCtrl.setRoot(SettingsPage)
   }
 
 }
