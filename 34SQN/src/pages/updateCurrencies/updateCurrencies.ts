@@ -41,7 +41,6 @@ export class UpdateCurrencies {
     //         display: 'bottom',
     //         max: max
     //     }
-}
     initializeCurrencies() {
         this.currencies = this.db.list('/Data/Currency/');
     }

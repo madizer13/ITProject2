@@ -42,12 +42,12 @@ export class Chooseperson {
         }, {
           text: 'View Currencies',
           handler: () => {
-            this.updateCurrencies();
+            console.log("done1");
           }
         }, {
           text: 'Update Currencies',
           handler: () => {
-            console.log("done2");
+            this.updateCurrencies();
           }
         }, {
           text: 'Cancel',
