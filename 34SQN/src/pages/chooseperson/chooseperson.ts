@@ -65,19 +65,19 @@ export class Chooseperson {
     this.people = this.db.list('/Data/Person/');
   }
 
-  getPeople(ev: any) {
-    this.initializePeople();
+  // getPeople(ev: any) {
+  //   this.initializePeople();
 
-    // set val to the value of the searchbar
-    let val = ev.target.value;
+  //   // set val to the value of the searchbar
+  //   let val = ev.target.value;
 
-    // if the value is an empty string don't filter the items
-    if (val && val.trim() != '') {
-      this.people = this.people.filter((item) => {
-        return (this.people.toLowerCase().indexOf(val.toLowerCase()) > -1);
-      })
-    }
-  }
+  //   // if the value is an empty string don't filter the items
+  //   if (val && val.trim() != '') {
+  //     this.people = this.people.filter((item) => {
+  //       return (this.people.toLowerCase().indexOf(val.toLowerCase()) > -1);
+  //     })
+  //   }
+  // }
 
   updateCurrencies(){
     let nav = this.navCtrl.setRoot('updateCurrencies');

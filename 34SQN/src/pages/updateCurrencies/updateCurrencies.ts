@@ -5,7 +5,8 @@ import { Placeholder } from '@angular/compiler/src/i18n/i18n_ast';
 import { HomePage } from './../home/home';
 //import { name } from 'ionic/dist';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController, Platform } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, Platform, AlertController, ActionSheetController } from 'ionic-angular';
+
 
 
 
@@ -16,49 +17,37 @@ import { IonicPage, NavController, NavParams, ModalController, Platform } from '
     selector: 'page-updateCurrencies',
     templateUrl: 'updateCurrencies.html',
 
-    })
+})
 
-    //CURRENTLY COPIED FROM THE SEARCH FUNCTION PAGE, MAKING CHANGES TO SEARCH CURRENCIES INSTEAD OF FLIGHTS
 export class UpdateCurrencies {
-    public Flight: FirebaseListObservable<any[]>;
-    title: any;
-
+    public currencies: FirebaseListObservable<any>;
     constructor(public navCtrl: NavController,
         private modalCtrl: ModalController,
         public params: NavParams,
-        private databa: AngularFireDatabase,
+        private db: AngularFireDatabase,
         private platform: Platform,
+        public alertCtrl: AlertController,
+        public actionSheetCtrl: ActionSheetController
     ) {
-        this.Flight = databa.list('/random');
-
-        if (params.get('isEdited')) {
-            let flight = params.get('flight'),
-                Flight = {
-                    name: 'flight',
-                    date: 'Select date',
-                    duration: 'hours'
-                };
-        }
-
-        var ref = firebase.database().ref("flight");
-        //ref.orderByKey().endAt("23").on("child_added"), function (snapshot){
-        //console.log(snapshot.key);
-        // };
-
+        this.initializeCurrencies();
     }
 
-    ionViewDidLoad() {
-        console.log('ionViewDidLoad SearchPage');
-        this.platform.ready()
-            .then(() => {
-                this.Flight = this.databa.list('/title');
-            });
+    // enterDate() {
+    //     var now = new Date(),
+    //         max = new Date(now.getFullYear() + 100, now.getMonth(), now.getDate());
 
+    //     var instance = mobiscroll.date('#demo', {
+    //         theme: 'ios',
+    //         display: 'bottom',
+    //         max: max
+    //     }
+}
+    initializeCurrencies() {
+        this.currencies = this.db.list('/Data/Currency/');
     }
- 
 
     goBack(): void {
-        this.navCtrl.setRoot(HomePage);
+        this.navCtrl.push(HomePage);
     }
 
 }
