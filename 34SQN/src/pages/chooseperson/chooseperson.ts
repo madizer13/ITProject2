@@ -62,7 +62,11 @@ export class Chooseperson {
   }
 
   initializePeople(){
-    this.people = this.db.list('/Data/Person/');
+    this.people = this.db.list('/Data/Person/',{
+      query: {
+        orderByChild: 'Name'
+      }
+    });
   }
 
   // getPeople(ev: any) {
