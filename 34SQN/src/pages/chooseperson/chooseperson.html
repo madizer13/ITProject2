@@ -12,8 +12,9 @@
 </ion-header>
 
 <ion-content padding>
+    <!-- <ion-searchbar (ionInput)="getPeople($event)"></ion-searchbar> -->
  <ion-list inset>
-  <button ion-item *ngFor="let person of people | async" (click)="selectOption(person.$key, person.Name, person.PersonRoleID)">
+  <button ion-item *ngFor="let person of people | async"(click)="selectOption(person.$key, person.Name, person.PersonRoleID)">
     {{ person.Name }}
   </button> 
 </ion-list>
