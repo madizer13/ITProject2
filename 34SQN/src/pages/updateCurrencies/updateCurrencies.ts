@@ -9,7 +9,7 @@ import { IonicPage, NavController, NavParams, AlertController, ActionSheetContro
 @Component({
     selector: 'page-updateCurrencies',
     templateUrl: 'updateCurrencies.html',
-
+})
 })
 
 export class UpdateCurrencies {
