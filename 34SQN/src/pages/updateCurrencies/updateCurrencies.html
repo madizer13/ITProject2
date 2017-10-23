@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Update Currencies</ion-title>
+    <ion-title>View/Edit Currencies</ion-title>
     <ion-buttons left>
       <button ion-button icon-only (click)="goBack()">
         <ion-icon name="arrow-back"></ion-icon>
@@ -10,18 +10,12 @@
   </ion-navbar>
 
 </ion-header>
-
 <ion-content padding>
-  <ion-list>
-    <ion-item>
-      <ion-label>Select Person</ion-label>
-      <ion-select [(ngModel)]="title" (ionChange)="search(title)">
-
-        <ion-option>
-          <ion-input placeholder="name"></ion-input>
-        </ion-option>
-      </ion-select>
+  <!-- <ion-searchbar (ionInput)="getPeople($event)"></ion-searchbar> -->
+  <ion-list inset>
+    <ion-item *ngFor="let curr of currencies | async">
+      <ion-label>{{ curr.CurrencyName }}</ion-label>
+      <ion-datetime displayformat="DD-MM-YYYY" [(ngModel)]="myDate"></ion-datetime>
     </ion-item>
   </ion-list>
-
 </ion-content>

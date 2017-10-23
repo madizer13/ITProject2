@@ -2,6 +2,8 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { IonicPage, NavController, ViewController } from 'ionic-angular';
+import { SettingsPage } from '../settings/settings';
+
 
 @IonicPage({name: 'addperson'})
 @Component({
@@ -13,10 +15,9 @@ export class AddpersonPage {
   public form              : any;
   public Name              : any = '';
   public PersonID          : any = '';
-  public RoleID              : any = [];
-  public person            : FirebaseListObservable<any[]>;
-
-  public isEditable        : boolean = false;
+  public PersonRoleID      : any = [''];
+  public pers            : FirebaseListObservable<any[]>;
+  
 
   constructor(
     public navCtrl        : NavController, 
@@ -28,41 +29,48 @@ export class AddpersonPage {
   
   {
     this.form = _FB.group({
-      'name'           : ['', Validators.required],
-      'personID'       : ['',Validators.required],
-      'roleID'           : ['', Validators.required],
+      'name'           : ['',Validators.minLength(1) && Validators.maxLength(30)],
+      'personID'       : ['',Validators.minLength(4) && Validators.maxLength(10)],
+      'roleID'         : ['',Validators.minLength(1) && Validators.maxLength(6)],
      
    });
 
-   this.person = _FIRE.list('/Data/Person');
-          
+   this.pers = _FIRE.list('/Data/Person');
+
   }
   saveMovie(value)
   {
       let name               : string = this.form.controls["name"].value,
-          personID           : string = this.form.controls["porsonID"].value,
-          roleID             : string = this.form.controls["role"].value
-          
-
-     this.person.push({
+          personID           : any = this.form.controls["personID"].value,
+          roleID             : any = this.form.controls["roleID"].value,
+          k: any,
+          roleIDs : string = '';
+    
+      for(k in roleID){
+        if (k < roleID.length-1)
+         roleIDs = roleIDs + roleID[k]+ ", " ;
+        else if(k=roleID.length-1)
+        roleIDs = roleIDs + roleID[k] ;
+        else
+          roleIDs = roleIDs + roleID[k]; 
+      }
+    
+       
+    if(name!='' && personID !=''&& roleID!=''){
+       this.pers.push({
          Name: name,
          PersonID: personID,
-         RoleID: roleID
-         
-     })
+         PersonRoleID: roleIDs,   
+       })
+      
+    }
      
-     this.closeAddperson();
-     this.addperson();
+     this.goBack();
+     
   }
 
-  addperson()
-  {
-      let nav = this.navCtrl.setRoot('addperson');
+  goBack():void{
+    this.navCtrl.setRoot(SettingsPage)
   }
-
-  closeAddperson(){
-    this.viewCtrl.dismiss();
-  }
-  
 
 }
