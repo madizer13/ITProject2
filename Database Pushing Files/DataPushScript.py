@@ -71,20 +71,29 @@ def clear(): # This method resets the database
     users_ref = ref.child('PilotFlight')
     users_ref.set({
         'UUID': {
-            'PersonID': ' ',
+            'PersonName': ' ',
             'RoleID': ' ',
             'FirstDay': ' ',
             'SecondDay': ' ',
+            'DualDay': ' ',
             'FirstNight': ' ',
             'SecondNight': ' ',
+            'DualNight': ' ',
             'DayLandings': ' ',
             'NightLandings': ' ',
+            'TakeoffDay': ' ',
+            'TakeoffNight': ' ',
             'FlightID': ' ',
-            'ILS': ' ',
-            'VOR': ' ',
-            'NDB': ' ',
-            'Circling': ' ',
-            'NoSlope': ' '
+            'ILSDay': ' ',
+            'ILSNight': ' ',
+            'VORDay': ' ',
+            'VORNight': ' ',
+            'NDBDay': ' ',
+            'NDBNight': ' ',
+            'CirclingDay': ' ',
+            'CirclingNight': ' ',
+            'NoSlopeDay': ' ',
+            'NoSlopeNight': ' '
             }
         })
 
