@@ -10,7 +10,6 @@ import { IonicPage, NavController, NavParams, AlertController, ActionSheetContro
     selector: 'page-updateCurrencies',
     templateUrl: 'updateCurrencies.html',
 })
-})
 
 export class UpdateCurrencies {
     public currencies: FirebaseListObservable<any>;

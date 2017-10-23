@@ -11,13 +11,6 @@ templateUrl: 'home.html'
 export class HomePage {
 
   public Flight   : FirebaseListObservable<any[]>;
-
-  constructor(public navCtrl: NavController,
-      private angFire: AngularFireDatabase,
-      private modalCtrl: ModalController,
-      private platform: Platform) {
-
-<<<<<<< HEAD
    constructor(public navCtrl    : NavController,
                private angFire   : AngularFireDatabase,
                private modalCtrl : ModalController,
@@ -34,24 +27,11 @@ export class HomePage {
 
    logout() { 
     let nav = this.navCtrl.setRoot('login');    
-=======
   }
 
-
-  addRecord()
-  {
-    let modal = this.modalCtrl.create('Modals');
-    modal.present();
->>>>>>> master
-  }
-
-  logout() { 
-  let nav = this.navCtrl.setRoot('login');    
-}
   search() { 
     let nav = this.navCtrl.setRoot('search');    
   }
-
   
   statistics(){
 
@@ -75,12 +55,6 @@ export class HomePage {
    {
       this.Flight.remove(movie);
    }
-<<<<<<< HEAD
-  
-}
-
-
-=======
 
    updateCurrencies() {
        let nav = this.navCtrl.setRoot('updateCurrencies');
@@ -95,4 +69,3 @@ export class HomePage {
       <button ion-button text-center color="danger" (click)="deleteFlight(flight)">Delete</button>
   </div>
 */
->>>>>>> master
