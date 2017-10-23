@@ -20,8 +20,6 @@
 
 <ion-content>
     <form [formGroup]="form" (ngSubmit)="saveCrew(form.value)">
-
-
         <ion-grid>
             <ion-item stacked color="secondary">
                 <ion-title>Captain</ion-title>
@@ -33,31 +31,34 @@
                 <ion-col>
                     <ion-item>
                         <ion-label stacked>1st </ion-label>
-                        <ion-input type="text" formControlName="capFirstNight" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="capFirstNight" [(ngModel)]="CapFirstNight"></ion-input>
                     </ion-item>
                 </ion-col>
+
                 <ion-col>
                     <ion-item>
                         <ion-label stacked> 2nd </ion-label>
-                        <ion-input type="text" formControlName="capSecondNight" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="capSecondNight" [(ngModel)]="CapSecondNight"></ion-input>
 
                     </ion-item>
                 </ion-col>
+
                 <ion-col>
                     <ion-item>
 
                         <ion-label stacked> Dual </ion-label>
-                        <ion-input type="text" formControlName="capDualNight" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="capDualNight" [(ngModel)]="CapDualNight"></ion-input>
 
                     </ion-item>
                 </ion-col>
+
             </ion-row>
             <ion-row>
                 <ion-col>
                     <ion-item>
 
                         <ion-label stacked> Takeoff </ion-label>
-                        <ion-input type="text" formControlName="capTakeoffNight" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="capTakeoffNight" [(ngModel)]="CapTakeoffNight"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -65,7 +66,7 @@
                     <ion-item>
 
                         <ion-label stacked> Landing </ion-label>
-                        <ion-input type="text" formControlName="capLandingNight" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="capLandingNight" [(ngModel)]="CapLandingNight"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -80,13 +81,13 @@
                 <ion-col>
                     <ion-item>
                         <ion-label stacked>ILS </ion-label>
-                        <ion-input type="text" formControlName="capILSNight" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="capILSNight" [(ngModel)]="CapILSNight"></ion-input>
                     </ion-item>
                 </ion-col>
                 <ion-col>
                     <ion-item>
                         <ion-label stacked> VOR </ion-label>
-                        <ion-input type="text" formControlName="capVORNight" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="capVORNight" [(ngModel)]="CapVORNight"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -94,7 +95,7 @@
                     <ion-item>
 
                         <ion-label stacked> NDB </ion-label>
-                        <ion-input type="text" formControlName="capNDB" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="capNDBNight" [(ngModel)]="CapNDB"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -102,7 +103,7 @@
                     <ion-item>
 
                         <ion-label stacked>Circling </ion-label>
-                        <ion-input type="text" formControlName="capCirclingNight" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="capCirclingNight" [(ngModel)]="CapCirclingNight"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -110,7 +111,7 @@
                     <ion-item>
 
                         <ion-label stacked> No slope</ion-label>
-                        <ion-input type="text" formControlName="capNoSlopeNight" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="capNoSlopeNight" [(ngModel)]="CapNoSlopeNight"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -127,13 +128,13 @@
                 <ion-col>
                     <ion-item>
                         <ion-label stacked>1st </ion-label>
-                        <ion-input type="text" formControlName="capFirstDay" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="capFirstDay" [(ngModel)]="CapFirstDay"></ion-input>
                     </ion-item>
                 </ion-col>
                 <ion-col>
                     <ion-item>
                         <ion-label stacked> 2nd </ion-label>
-                        <ion-input type="text" formControlName="capSecondDay" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="capSecondDay" [(ngModel)]="CapSecondDay"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -141,7 +142,7 @@
                     <ion-item>
 
                         <ion-label stacked> 3rd </ion-label>
-                        <ion-input type="text" formControlName="capDualDay" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="capDualDay" [(ngModel)]="CapDualDay"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -151,7 +152,7 @@
                     <ion-item>
 
                         <ion-label stacked> Takeoff </ion-label>
-                        <ion-input type="text" formControlName="capTakeoffDay" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="capTakeoffDay" [(ngModel)]="CapTakeoffDay"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -159,7 +160,7 @@
                     <ion-item>
 
                         <ion-label stacked> Landing </ion-label>
-                        <ion-input type="text" formControlName="capLandingDay" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="capLandingDay" [(ngModel)]="CapLandingDay"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -172,13 +173,13 @@
                 <ion-col>
                     <ion-item>
                         <ion-label stacked>ILS </ion-label>
-                        <ion-input type="text" formControlName="capILSDay" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="capILSDay" [(ngModel)]="CapILSDay"></ion-input>
                     </ion-item>
                 </ion-col>
                 <ion-col>
                     <ion-item>
                         <ion-label stacked> VOR </ion-label>
-                        <ion-input type="text" formControlName="capVORDay" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="capVORDay" [(ngModel)]="CapVORDay"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -186,7 +187,7 @@
                     <ion-item>
 
                         <ion-label stacked> NDB </ion-label>
-                        <ion-input type="text" formControlName="capNDBDay" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="capNDBDay" [(ngModel)]="CapNDBDay"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -194,7 +195,7 @@
                     <ion-item>
 
                         <ion-label stacked>Circling </ion-label>
-                        <ion-input type="text" formControlName="capCirclingDay" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="capCirclingDay" [(ngModel)]="CapCirclingDay"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -202,7 +203,7 @@
                     <ion-item>
 
                         <ion-label stacked> No slope</ion-label>
-                        <ion-input type="text" formControlName="capNoSlopeDay" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="capNoSlopeDay" [(ngModel)]="CapNoSlopeDay"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -225,13 +226,13 @@
                 <ion-col>
                     <ion-item>
                         <ion-label stacked>1st </ion-label>
-                        <ion-input type="text" formControlName="coFirstNight" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="coFirstNight" [(ngModel)]="CoFirstNight"></ion-input>
                     </ion-item>
                 </ion-col>
                 <ion-col>
                     <ion-item>
                         <ion-label stacked> 2nd </ion-label>
-                        <ion-input type="text" formControlName="coSecondNight" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="coSecondNight" [(ngModel)]="CoSecondNight"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -239,7 +240,7 @@
                     <ion-item>
 
                         <ion-label stacked> Dual </ion-label>
-                        <ion-input type="text" formControlName="coDualNight" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="coDualNight" [(ngModel)]="CoDualNight"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -249,7 +250,7 @@
                     <ion-item>
 
                         <ion-label stacked> Takeoff </ion-label>
-                        <ion-input type="text" formControlName="coTakeoffNight" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="coTakeoffNight" [(ngModel)]="CoTakeoffNight"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -257,7 +258,7 @@
                     <ion-item>
 
                         <ion-label stacked> Landing </ion-label>
-                        <ion-input type="text" formControlName="coLandingNight" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="coLandingNight" [(ngModel)]="CoLandingNight"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -272,13 +273,13 @@
                 <ion-col>
                     <ion-item>
                         <ion-label stacked>ILS </ion-label>
-                        <ion-input type="text" formControlName="coILSNight" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="coILSNight" [(ngModel)]="CoILSNight"></ion-input>
                     </ion-item>
                 </ion-col>
                 <ion-col>
                     <ion-item>
                         <ion-label stacked> VOR </ion-label>
-                        <ion-input type="text" formControlName="coVORNight" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="coVORNight" [(ngModel)]="CoVORNight"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -286,7 +287,7 @@
                     <ion-item>
 
                         <ion-label stacked> NDB </ion-label>
-                        <ion-input type="text" formControlName="coNDBNight" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="coNDBNight" [(ngModel)]="CoNDBNight"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -294,7 +295,7 @@
                     <ion-item>
 
                         <ion-label stacked>Circling </ion-label>
-                        <ion-input type="text" formControlName="coCirclingNight" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="coCirclingNight" [(ngModel)]="CoCirclingNight"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -302,15 +303,11 @@
                     <ion-item>
 
                         <ion-label stacked> No slope</ion-label>
-                        <ion-input type="text" formControlName="coNoSlopeNight" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="coNoSlopeNight" [(ngModel)]="CoNoSlopeNight"></ion-input>
 
                     </ion-item>
                 </ion-col>
             </ion-row>
-
-
-
-
 
             <ion-item color="primary">
                 <div block>Day </div>
@@ -319,13 +316,13 @@
                 <ion-col>
                     <ion-item>
                         <ion-label stacked>1st </ion-label>
-                        <ion-input type="text" formControlName="coFirstDay" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="coFirstDay" [(ngModel)]="CoFirstDay"></ion-input>
                     </ion-item>
                 </ion-col>
                 <ion-col>
                     <ion-item>
                         <ion-label stacked> 2nd </ion-label>
-                        <ion-input type="text" formControlName="coSecondDay" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="coSecondDay" [(ngModel)]="CoSecondDay"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -333,7 +330,7 @@
                     <ion-item>
 
                         <ion-label stacked> 3rd </ion-label>
-                        <ion-input type="text" formControlName="coDualDay" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="coDualDay" [(ngModel)]="CoDualDay"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -343,7 +340,7 @@
                     <ion-item>
 
                         <ion-label stacked> Takeoff </ion-label>
-                        <ion-input type="text" formControlName="coTakeoffDay" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="coTakeoffDay" [(ngModel)]="CoTakeoffDay"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -351,7 +348,7 @@
                     <ion-item>
 
                         <ion-label stacked> Landing </ion-label>
-                        <ion-input type="text" formControlName="coLandingDay" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="coLandingDay" [(ngModel)]="CoLandingDay"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -364,13 +361,13 @@
                 <ion-col>
                     <ion-item>
                         <ion-label stacked>ILS </ion-label>
-                        <ion-input type="text" formControlName="coILSDay" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="coILSDay" [(ngModel)]="CoILSDay"></ion-input>
                     </ion-item>
                 </ion-col>
                 <ion-col>
                     <ion-item>
                         <ion-label stacked> VOR </ion-label>
-                        <ion-input type="text" formControlName="coVORDay" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="coVORDay" [(ngModel)]="CoVORDay"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -378,7 +375,7 @@
                     <ion-item>
 
                         <ion-label stacked> NDB </ion-label>
-                        <ion-input type="text" formControlName="coNDBDay" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="coNDBDay" [(ngModel)]="CoNDBDay"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -386,7 +383,7 @@
                     <ion-item>
 
                         <ion-label stacked>Circling </ion-label>
-                        <ion-input type="text" formControlName="coCirclingDay" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="coCirclingDay" [(ngModel)]="CoCirclingDay"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -394,7 +391,7 @@
                     <ion-item>
 
                         <ion-label stacked> No slope</ion-label>
-                        <ion-input type="text" formControlName="coNoSlopeDay" [(ngModel)]="First"></ion-input>
+                        <ion-input type="text" formControlName="coNoSlopeDay" [(ngModel)]="CoNoSlopeDay"></ion-input>
 
                     </ion-item>
                 </ion-col>
@@ -409,5 +406,19 @@
                 <ion-option value="put your code to take input from the database">Ian McShane</ion-option>
             </ion-select>
         </ion-item>
+      <ion-item>
+        <input type="hidden" name="flightId">
+
+        <button ion-button block color="primary" text-center [disabled]="!form.valid">
+          <div *ngIf="!isEditable">
+            Save Crew
+          </div>
+
+          <div *ngIf="isEditable">
+            Update this flight
+          </div>
+        </button>
+      </ion-item>
     </form>
 </ion-content>
+1

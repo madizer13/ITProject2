@@ -90,7 +90,7 @@ export class Modals {
 
    addCrew()
    {
-       let nav = this.navCtrl.setRoot('addCrew');
+     let nav = this.navCtrl.setRoot('addCrew');
    }
    
    /*
