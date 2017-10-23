@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>UpdateCurrencies</ion-title>
+    <ion-title>View/Edit Currencies</ion-title>
     <ion-buttons left>
       <button ion-button icon-only (click)="goBack()">
         <ion-icon name="arrow-back"></ion-icon>
@@ -11,22 +11,61 @@
 
 </ion-header>
 
+
 <ion-content padding>
-  <ion-list>
-    <ion-item>
-      <ion-label fixed>First Name</ion-label>
-      <ion-input type="text" [(ngModel)]="firstName"></ion-input>
-    </ion-item>
 
-    <ion-item>
-      <ion-label fixed>Last Name</ion-label>
-      <ion-input type="text" [(ngModel)]="lastName"></ion-input>
-    </ion-item>
-  </ion-list>
+  <!--Grid for Currently Obtained Currencies-->
+  <ion-title>Obtained</ion-title>
+  <ion-grid>
+    <ion-row align-items-start>
+      <ion-col>
+        <ion-item>
+          Currency Name
+        </ion-item>
+        <br><ion-input placeholder="placeholder"></ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          Date Achieved
+        </ion-item>
+        <br><ion-input placeholder="placeholder"></ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          Expiry Date
+        </ion-item>
+        <br><ion-input placeholder="placeholder"></ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          Days To Go
+        </ion-item>
+        <br><ion-input placeholder="placeholder"></ion-input>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-  <button ion-button block (click)="createPerson(firstName, lastName)">
-    Search Person
-  </button>
-
+  <!--Grid for Unobtained Currencies-->
+  <br />
+  <br />
+  <br />
+  <br />
+  <ion-title>
+    Unobtained
+    <button ion-button color="dark" (click)="presentPrompt()">Edit</button>
+  </ion-title>
+  
+  <ion-grid>
+    <ion-row align-items-start>
+      <ion-col>
+        <ion-item>Currency Name</ion-item>
+        <br><ion-input placeholder="placeholder"></ion-input>
+      </ion-col>
+      <ion-col>
+        <ion-item>Period of Validity</ion-item>
+        <br><ion-input placeholder="placeholder"></ion-input>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

@@ -43,14 +43,10 @@ export class Chooseperson {
           console.log("done1");
         }
       },{
-        text: 'View Currencies',
+        text: 'View/Edit Currencies',
         handler: () => {
-          console.log("done3");
-        }
-      },{
-        text: 'Update Currencies',
-        handler: () => {
-          console.log("done2");
+          let nav = this.navCtrl.setRoot('updateCurrencies');
+          //console.log("done2");
         }
       },{
         text: 'Cancel',
