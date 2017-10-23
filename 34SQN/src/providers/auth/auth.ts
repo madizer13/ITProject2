@@ -13,7 +13,8 @@ export class AuthProvider {
   }
 
  loginUser(email: string, password: string): firebase.Promise<any> {
-    return firebase.auth().signInWithEmailAndPassword(email, password);
+ 
+  return firebase.auth().signInWithEmailAndPassword(email, password);
 }
 
  signupUser(email: string, password: string): firebase.Promise<any> {

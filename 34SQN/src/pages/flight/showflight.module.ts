@@ -1,15 +1,17 @@
+import { Showflight } from './showflight';
+
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicPageModule, IonicErrorHandler } from 'ionic-angular';
-import { SearchPage } from './search';
+
 
 @NgModule({
   declarations: [
-    SearchPage,
+    Showflight,
   ], providers: [{ provide: ErrorHandler, 
                 useClass: IonicErrorHandler }],
 
   imports: [
-    IonicPageModule.forChild(SearchPage),
+    IonicPageModule.forChild(Showflight),
   ],
 })
 export class SearchPageModule {}

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, ModalController, Platform } from 'ionic-angular';
 import { AngularFireDatabase,  FirebaseListObservable} from 'angularfire2/database';
-//import { AngularFireModule } from 'angularfire2';
 import 'rxjs/add/operator/map';
 import * as firebase from 'firebase/app';
 
@@ -21,19 +20,6 @@ export class HomePage {
    {
 
    }
-
-
-/* shows whats on the screen
-   ionViewDidLoad()
-   {
-      this.platform.ready()
-      .then(() =>
-      {
-         this.Flight= this.angFire.list('/flights');
-      });
-   }
-*/
-
 
    addRecord()
    {
@@ -72,14 +58,7 @@ export class HomePage {
    {
       this.Flight.remove(movie);
    }
-
+  
 }
 
-/* 
- <div class="manage-record" padding>
 
-        <button ion-button text-center color="primary" (click)="editFlight(flight)">Edit</button>
-
-        <button ion-button text-center color="danger" (click)="deleteFlight(flight)">Delete</button>
-    </div>
-*/

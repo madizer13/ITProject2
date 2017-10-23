@@ -4,36 +4,44 @@
         <ion-title>search</ion-title>
         <ion-buttons left>
             <button ion-button icon-only (click)="goBack()">
-    <ion-icon name="arrow-back"></ion-icon>
-    </button>
+        <ion-icon name="arrow-back"></ion-icon>
+        </button>
         </ion-buttons>
     </ion-navbar>
-
+    <ion-toolbar>
+        <ion-segment [(ngModel)]="icons" clor="secondary">
+            <ion-segment-button value=search(form.value)>
+                <ion-icon name=search(form.value)> search</ion-icon>
+            </ion-segment-button>
+            <ion-segment-button (click)=go()>
+                <ion-icon name=getFlight()>Flights</ion-icon>
+            </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-    <ion-list>
+
+    <form [formGroup]="form" (ngSubmit)="search(form.value)">
+        <ion-item-divider color="light">
+            <div *ngIf="!isEditable">
+                search
+            </div>
+        </ion-item-divider>
         <ion-item>
-            <ion-label>search</ion-label>
-            <ion-select [(ngModel)]="title" (ionChange)="search(title)">
+            <ion-label stacked color="danger"></ion-label>
+            <ion-input type="Enter the name " formControlName="first" [(ngModel)]="name"></ion-input>
 
-                <ion-option>
-                    <ion-input placeholder="name"></ion-input>
-                </ion-option>
-                <ion-option value="any">quries</ion-option>
-            </ion-select>
         </ion-item>
-    </ion-list>
-    <ion-list>
         <ion-item>
-            <ion-label>logbook</ion-label>
-            <ion-select [(ngModel)]="logbook">
-                <ion-option aria-placeholder=" ">details</ion-option>
+            <button ion-button block block type="submit" color="primary" text-center [disabled]="!form.valid">
+               Search
+             </button>
+            <div>
 
-            </ion-select>
+            </div>
+
         </ion-item>
-    </ion-list>
+    </form>
 
-
-
-</ion-content>
+</ion-content>l
