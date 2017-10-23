@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Show All FLights</ion-title>
+        <ion-buttons left>
+            <button ion-button icon-only (click)="goBack()">
+                <ion-icon name="arrow-back"></ion-icon>
+                </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-card class="pers" text-wrap *ngFor="let pers of flight | async">
+        <ion-item>
+            <ion-label stacked>Flight Details:</ion-label>
+        </ion-item>
+        <ion-card-content>
+            <ion-badge>Arrival Airport : {{pers.ArrivalAirport }}</ion-badge>
+        </ion-card-content>
+        <ion-card-content>
+            <ion-badge>Arrival Time :{{pers.ArrivalDTG}}</ion-badge>
+        </ion-card-content>
+        <ion-card-content>
+            <ion-badge> Departure Airport: {{pers.DepartureAirport}}</ion-badge>
+        </ion-card-content>
+        <ion-badge> Departure Time: {{pers.DepartureDTG}}</ion-badge>
+        <ion-card-content>
+            <ion-badge> Flight ID{{pers.FlightID}} </ion-badge>
+        </ion-card-content>
+        <ion-card-content>
+            <ion-badge> Platform : {{ pers.Platform}}</ion-badge>
+        </ion-card-content>
+        <ion-card-content>
+            <ion-badge>Is it a Night Flight : {{pers.NightFlight}}</ion-badge>
+        </ion-card-content>
+        <ion-card-content>
+            <ion-badge>Weather summary :{{pers.WeatherSummary}}</ion-badge>
+        </ion-card-content>
+        <div class="manage-record" padding>
+            <button ion-button icon-right small color="secondary" (click)="edit(pers.$key)">Edit</button>
+        </div>
+
+    </ion-card>
+
+
+</ion-content>
